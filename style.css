@@ -1,3 +1,4 @@
+/* Base Styling */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0;
@@ -20,6 +21,11 @@ h1, h2 {
 
 ul {
   padding-left: 1.2rem;
+}
+
+/* Sidebar Wrapper (for mobile) */
+.sidebar-wrapper {
+  display: block;
 }
 
 /* Sidebar */
@@ -129,22 +135,7 @@ ul {
   cursor: pointer;
 }
 
-/* Close Button */
-.close-sidebar {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  color: #666;
-  cursor: pointer;
-  z-index: 1002;
-}
-
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -154,35 +145,29 @@ ul {
     display: block;
   }
 
-  .sidebar {
-    position: fixed;
-    top: 60px;
-    left: 16px;
-    right: 16px;
-    width: auto;
-    max-height: 0;
+  .sidebar-wrapper {
+    width: 100%;
     overflow: hidden;
-    padding: 0;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .sidebar-wrapper.open {
+    max-height: 1000px;
+  }
+
+  .sidebar {
+    position: static;
+    transform: none;
+    width: auto;
+    padding: 2rem 1.5rem 1rem;
+    margin: 0 1rem;
     border-radius: 16px;
-    z-index: 1001;
-    background-color: white;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    transition: max-height 0.3s ease, padding 0.3s ease;
-  }
-
-  .sidebar.open {
-    max-height: 500px;
-    padding: 2.5rem 1.5rem 1.5rem;
-    overflow-y: auto;
-  }
-
-  .close-sidebar {
-    display: block;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
 
   .main {
     margin-left: 0;
     padding: 1rem;
-    margin-top: 1rem;
   }
 }
