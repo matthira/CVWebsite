@@ -12,19 +12,20 @@
   <!-- Hamburger Button -->
   <button class="hamburger" onclick="toggleMenu()">☰ Menu</button>
 
-  <!-- Sidebar Navigation -->
-  <div class="sidebar" id="sidebar">
-    <button class="close-sidebar" onclick="toggleMenu()">✕</button>
-    <h3>Contents</h3>
-    <nav>
-      <a href="#education">Education</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#honors">Honors & Awards</a>
-      <a href="#publications">Research & Publications</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#interests">Interests</a>
-      <a href="#cv">Download CV</a>
-    </nav>
+  <!-- Sidebar Navigation (wrapped for mobile behavior) -->
+  <div class="sidebar-wrapper" id="sidebarWrapper">
+    <div class="sidebar" id="sidebar">
+      <h3>Contents</h3>
+      <nav>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#honors">Honors & Awards</a>
+        <a href="#publications">Research & Publications</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#interests">Interests</a>
+        <a href="#cv">Download CV</a>
+      </nav>
+    </div>
   </div>
 
   <!-- Main Content -->
@@ -43,7 +44,7 @@
       </div>
     </section>
 
-    <!-- Education -->
+    <!-- Sections (Education to CV Download) -->
     <section class="section" id="education">
       <h2>Education</h2>
       <ul>
@@ -54,7 +55,6 @@
       </ul>
     </section>
 
-    <!-- Certifications -->
     <section class="section" id="certifications">
       <h2>Certifications & Licenses</h2>
       <ul>
@@ -68,13 +68,11 @@
       </ul>
     </section>
 
-    <!-- Honors -->
     <section class="section" id="honors">
       <h2>Honors & Awards</h2>
       <p>Young Ophthalmology Leaders Award, ASCRS Poster Awards, Chairman’s OKAP Awards, John Aure Buesseler Award, and more.</p>
     </section>
 
-    <!-- Publications -->
     <section class="section" id="publications">
       <h2>Research & Publications</h2>
       <ul>
@@ -85,7 +83,6 @@
       </ul>
     </section>
 
-    <!-- Leadership -->
     <section class="section" id="leadership">
       <h2>Leadership & Service</h2>
       <ul>
@@ -95,7 +92,6 @@
       </ul>
     </section>
 
-    <!-- Interests -->
     <section class="section" id="interests">
       <h2>Interests & Skills</h2>
       <ul>
@@ -103,7 +99,6 @@
       </ul>
     </section>
 
-    <!-- CV Download -->
     <section class="section" id="cv">
       <h2>Download CV</h2>
       <p><a href="assets/Matthew_Hirabayashi_CV.pdf" target="_blank">Click here to download full CV (PDF)</a></p>
@@ -114,18 +109,18 @@
   <!-- Toggle Sidebar Script -->
   <script>
     function toggleMenu() {
-      const sidebar = document.querySelector('.sidebar');
-      sidebar.classList.toggle('open');
+      const wrapper = document.getElementById('sidebarWrapper');
+      wrapper.classList.toggle('open');
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+      const wrapper = document.getElementById('sidebarWrapper');
       const links = document.querySelectorAll('.sidebar nav a');
-      const sidebar = document.querySelector('.sidebar');
 
       links.forEach(link => {
         link.addEventListener('click', () => {
           if (window.innerWidth <= 768) {
-            sidebar.classList.remove('open');
+            wrapper.classList.remove('open');
           }
         });
       });
