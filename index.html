@@ -2,21 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Matthew Hirabayashi, MD</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papNM3+1b0ke+xkQ2C5G3nJMgOzy2b7dZqU2ZRZ9T+Oo1MC3l7Dj9EQ0xg1EQa9kg5z0fL6l2rE6zStJ3CRhKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* --- Base Styling --- */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-color: #f9f9f9;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2 {
+      margin: 0 0 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    /* --- Sidebar --- */
+    .sidebar {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      width: 180px;
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      z-index: 10;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar nav a {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar nav a:hover {
+      color: #007BFF;
+      font-weight: 600;
+    }
+
+    /* --- Main Content --- */
+    .main {
+      margin-left: 250px;
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .section {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* --- Header & Contact --- */
+    .header {
+      text-align: center;
+    }
+
+    .headshot {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-icons a {
+      color: #444;
+      transition: color 0.3s ease;
+    }
+
+    .contact-icons a:hover {
+      color: #007BFF;
+    }
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: none;
+        width: auto;
+        margin: 1rem auto;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
-  <div class="contact-icons">
-  <a href="mailto:matt@eyeflymd.com" aria-label="Email" target="_blank"><i class="fas fa-envelope"></i></a>
-  <a href="https://eyeflymd.com" aria-label="Website" target="_blank"><i class="fas fa-globe"></i></a>
-  <a href="https://instagram.com/eyeflymd" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://youtube.com/@eyeflymd" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-</div>
 <body>
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>Contents</h2>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <h3>Contents</h3>
     <nav>
       <a href="#education">Education</a>
       <a href="#certifications">Certifications</a>
@@ -26,25 +154,26 @@
       <a href="#interests">Interests</a>
       <a href="#cv">Download CV</a>
     </nav>
-  </aside>
+  </div>
 
   <!-- Main Content -->
-  <main class="main">
+  <div class="main">
+
     <!-- Header Section -->
-    <section class="header">
+    <section class="section header">
       <img src="assets/Matt Hirabayashi Headshot Circle Small.png" alt="Matthew Hirabayashi headshot" class="headshot" />
       <h1>Matthew Hirabayashi, MD</h1>
-      <p class="subtitle">Ophthalmologist · Surgeon · Educator · Pilot</p>
+      <p>Ophthalmologist · Surgeon · Educator · Pilot</p>
       <div class="contact-icons">
-        <a href="mailto:matt@eyeflymd.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://eyeflymd.com" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
-        <a href="https://instagram.com/eyeflymd" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@eyeflymd" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="mailto:matt@eyeflymd.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://eyeflymd.com" aria-label="Website" target="_blank"><i class="fas fa-globe"></i></a>
+        <a href="https://instagram.com/eyeflymd" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@eyeflymd" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
     </section>
 
-    <!-- Sections -->
-    <section id="education" class="section">
+    <!-- Education -->
+    <section class="section" id="education">
       <h2>Education</h2>
       <ul>
         <li>Refractive Surgery Fellowship – Parkhurst NuVision, 2024–Present</li>
@@ -54,7 +183,8 @@
       </ul>
     </section>
 
-    <section id="certifications" class="section">
+    <!-- Certifications -->
+    <section class="section" id="certifications">
       <h2>Certifications & Licenses</h2>
       <ul>
         <li>WaveLight EX500, Contoura (ALCON)</li>
@@ -67,47 +197,47 @@
       </ul>
     </section>
 
-    <section id="honors" class="section">
+    <!-- Honors -->
+    <section class="section" id="honors">
       <h2>Honors & Awards</h2>
-      <ul>
-        <li>Young Ophthalmology Leaders Award</li>
-        <li>ASCRS Poster Awards</li>
-        <li>Chairman’s OKAP Awards</li>
-        <li>John Aure Buesseler Award</li>
-      </ul>
+      <p>Young Ophthalmology Leaders Award, ASCRS Poster Awards, Chairman’s OKAP Awards, John Aure Buesseler Award, and more.</p>
     </section>
 
-    <section id="publications" class="section">
+    <!-- Publications -->
+    <section class="section" id="publications">
       <h2>Research & Publications</h2>
       <ul>
-        <li>Hirabayashi M, et al. "Clinical outcomes of ICLs in shallow ACD eyes." <em>Clinical Ophthalmology</em>. 2024.</li>
-        <li>Hirabayashi M, et al. "AI model for predicting ICL vault." <em>Journal of Cataract & Refractive Surgery</em>. 2024.</li>
-        <li>Hirabayashi M, et al. "STODS Syndrome." <em>Diagnostics</em>. 2023.</li>
-        <li>Hirabayashi M, et al. "Spherical aberration and IOLs." <em>Journal of Refractive Surgery</em>. 2023.</li>
+        <li>Hirabayashi M, et al. Clinical outcomes of ICLs in shallow ACD eyes. *Clinical Ophthalmology*. 2024.</li>
+        <li>Hirabayashi M, et al. AI model for predicting ICL vault. *Journal of Cataract & Refractive Surgery*. 2024.</li>
+        <li>Hirabayashi M, et al. STODS Syndrome. *Diagnostics*. 2023.</li>
+        <li>Hirabayashi M, et al. Spherical aberration and IOLs. *Journal of Refractive Surgery*. 2023.</li>
       </ul>
     </section>
 
-    <section id="leadership" class="section">
-      <h2>Leadership</h2>
+    <!-- Leadership -->
+    <section class="section" id="leadership">
+      <h2>Leadership & Service</h2>
       <ul>
-        <li>Chief Resident, University of Missouri Ophthalmology</li>
-        <li>Committee Lead, National Ophthalmology Interest Group</li>
+        <li>Chief Resident, Ophthalmology, University of Missouri</li>
+        <li>Resident Ambassador – AAO Mid-Year Forum</li>
+        <li>Medical Mission Volunteer – Vision Outreach International</li>
       </ul>
     </section>
 
-    <section id="interests" class="section">
+    <!-- Interests -->
+    <section class="section" id="interests">
       <h2>Interests & Skills</h2>
       <ul>
-        <li>Aviation (IFR/Commercial Pilot)</li>
-        <li>AI and Machine Learning in Medicine</li>
-        <li>Medical Education and Innovation</li>
+        <li>Aviation (Commercial + CFI), Videography, Public Speaking, Python, Adobe Suite</li>
       </ul>
     </section>
 
-    <section id="cv" class="section">
+    <!-- CV Download -->
+    <section class="section" id="cv">
       <h2>Download CV</h2>
-      <p><a href="assets/Matthew_Hirabayashi_CV.pdf" target="_blank">Click here to download PDF version of the CV</a></p>
+      <p><a href="assets/Matthew_Hirabayashi_CV.pdf" target="_blank">Click here to download full CV (PDF)</a></p>
     </section>
-  </main>
+
+  </div>
 </body>
 </html>
