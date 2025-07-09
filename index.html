@@ -107,24 +107,41 @@
   </div>
 
   <!-- Toggle Sidebar Script -->
-  <script>
-    function toggleMenu() {
-      const wrapper = document.getElementById('sidebarWrapper');
-      wrapper.classList.toggle('open');
+ <script>
+  function toggleMenu() {
+    const wrapper = document.getElementById('sidebarWrapper');
+    const isOpen = wrapper.classList.contains('open');
+
+    // Toggle class
+    wrapper.classList.toggle('open');
+
+    // Ensure the sidebar expands smoothly
+    if (!isOpen) {
+      wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+    } else {
+      wrapper.style.maxHeight = "0";
     }
+  }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const wrapper = document.getElementById('sidebarWrapper');
-      const links = document.querySelectorAll('.sidebar nav a');
+  document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.getElementById('sidebarWrapper');
+    const links = document.querySelectorAll('.sidebar nav a');
 
-      links.forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 768) {
-            wrapper.classList.remove('open');
-          }
-        });
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          wrapper.classList.remove('open');
+          wrapper.style.maxHeight = "0";
+        }
       });
     });
-  </script>
-</body>
-</html>
+
+    // Optional: reset height on window resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        wrapper.style.maxHeight = null;
+        wrapper.classList.remove('open');
+      }
+    });
+  });
+</script>
