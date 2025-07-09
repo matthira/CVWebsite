@@ -136,37 +136,41 @@
 
     /* --- Responsive Design --- */
     @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
+  body {
+    flex-direction: column;
+  }
 
-      .hamburger {
-        display: block;
-      }
+  .hamburger {
+    display: block;
+  }
 
-      .sidebar {
-        position: relative;
-        top: unset;
-        left: unset;
-        transform: none;
-        width: auto;
-        margin: 1rem;
-        max-height: 0;
-        overflow: hidden;
-        padding: 0;
-        transition: max-height 0.3s ease;
-      }
+  .sidebar {
+    position: fixed; /* change from relative */
+    top: 60px; /* below the hamburger */
+    left: 16px;
+    right: 16px;
+    width: auto;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 16px;
+    z-index: 1001;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
 
-      .sidebar.open {
-        max-height: 500px;
-        padding: 1.5rem;
-      }
+  .sidebar.open {
+    max-height: 500px;
+    padding: 1.5rem;
+  }
 
-      .main {
-        margin-left: 0;
-        padding: 1rem;
-      }
-    }
+  .main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
   </style>
 </head>
 <body>
