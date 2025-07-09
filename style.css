@@ -1,5 +1,4 @@
-provide updated CSS based on this: 
-
+/* Base Styling */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0;
@@ -7,21 +6,6 @@ body {
   background-color: #f9f9f9;
   scroll-behavior: smooth;
   color: #222;
-  display: flex;
-  flex-direction: row;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1, h2 {
-  margin: 0 0 1rem;
-}
-
-ul {
-  padding-left: 1.2rem;
 }
 
 /* Sidebar */
@@ -80,10 +64,12 @@ ul {
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Header */
+/* Header & Headshot */
 .header {
   text-align: center;
 }
@@ -115,7 +101,7 @@ ul {
   color: #007BFF;
 }
 
-/* Hamburger */
+/* Hamburger for Mobile */
 .hamburger {
   display: none;
   position: fixed;
@@ -131,7 +117,7 @@ ul {
   cursor: pointer;
 }
 
-/* Close Button */
+/* Close Button (for sidebar on mobile) */
 .close-sidebar {
   display: none;
   background: none;
@@ -146,10 +132,10 @@ ul {
   z-index: 1002;
 }
 
-/* Responsive */
+/* Responsive Mobile Layout */
 @media (max-width: 768px) {
   body {
-    flex-direction: column;
+    display: block;
   }
 
   .hamburger {
