@@ -104,10 +104,9 @@ body {
 /* Hamburger for Mobile */
 .hamburger {
   display: none;
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 1rem;
+  position: fixed;
+  top: 16px;
+  left: 16px;
   z-index: 1100;
   background: white;
   border: none;
@@ -129,22 +128,24 @@ body {
   }
 
   .sidebar {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: translateY(0);
-    width: 100%;
+    position: fixed;
+    top: 60px;
+    left: 16px;
+    right: 16px;
+    width: auto;
     max-height: 0;
     overflow: hidden;
-    border-radius: 0;
     padding: 0;
+    border-radius: 16px;
+    z-index: 1001;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background-color: white;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    z-index: 1000;
   }
 
   .sidebar.open {
-    max-height: 400px;
-    padding: 1rem 1.5rem;
+    max-height: 500px;
+    padding: 1.5rem;
   }
 
   .sidebar h3 {
