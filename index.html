@@ -5,38 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matthew Hirabayashi, MD</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="favicon.ico" />
+  <script src="https://kit.fontawesome.com/3d6efcf4fa.js" crossorigin="anonymous"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="sidebar">
-    <h2>CONTENTS</h2>
-    <nav>
-      <a href="#education">Education</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#honors">Honors & Awards</a>
-      <a href="#publications">Research & Publications</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#interests">Interests</a>
-      <a href="assets/cv.pdf" target="_blank">Download CV</a>
-    </nav>
-  </div>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <h2>CONTENTS</h2>
+      <nav>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#honors">Honors & Awards</a>
+        <a href="#publications">Research & Publications</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#interests">Interests</a>
+        <a href="assets/cv.pdf" target="_blank">Download CV</a>
+      </nav>
+    </aside>
 
-  <div class="main-content">
-    <header>
-      <img src="assets/headshot.png" alt="Matthew Hirabayashi headshot" class="headshot">
-      <h1>Matthew Hirabayashi, MD</h1>
-      <p>Ophthalmologist &middot; Surgeon &middot; Educator &middot; Pilot</p>
-      <div class="social-icons">
-        <a href="mailto:matt@eyeflymd.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://eyeflymd.com" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
-        <a href="https://instagram.com/eyeflymd" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@eyeflymd" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
-    </header>
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="intro">
+        <img src="assets/headshot.png" alt="Matthew Hirabayashi headshot" class="headshot" />
+        <h1>Matthew Hirabayashi, MD</h1>
+        <p>Ophthalmologist · Surgeon · Educator · Pilot</p>
+        <div class="social-icons">
+          <a href="mailto:matt@eyeflymd.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://eyeflymd.com" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
+          <a href="https://instagram.com/eyeflymd" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@eyeflymd" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </section>
 
-    <main>
-      <section id="education" class="card fade-in">
+      <section id="education">
         <h2>Education</h2>
         <ul>
           <li>Refractive Surgery Fellowship – Parkhurst NuVision, 2024–Present</li>
@@ -46,7 +54,7 @@
         </ul>
       </section>
 
-      <section id="certifications" class="card fade-in">
+      <section id="certifications">
         <h2>Certifications & Licenses</h2>
         <ul>
           <li>WaveLight EX500, Contoura (ALCON)</li>
@@ -59,52 +67,50 @@
         </ul>
       </section>
 
-      <section id="honors" class="card fade-in">
+      <section id="honors">
         <h2>Honors & Awards</h2>
-        <p>Young Ophthalmology Leaders Award, ASCRS Poster Awards, Chairman’s OKAP Awards, John Aure Buesseler Award, and more.</p>
-      </section>
-
-      <section id="publications" class="card fade-in">
-        <h2>Research & Publications</h2>
-        <h3>Peer-Reviewed Publications</h3>
         <ul>
-          <li><em>Clinical outcomes of ICLs in shallow ACD eyes</em> (2024) – Clinical Ophthalmology</li>
-          <li><em>AI model for predicting ICL vault</em> (2024) – Journal of Cataract & Refractive Surgery</li>
-          <li><em>STODS Syndrome</em> (2023) – Diagnostics</li>
-          <li><em>Spherical aberration and IOLs</em> (2023) – Journal of Refractive Surgery</li>
+          <li>Young Ophthalmology Leaders Award – ASCRS</li>
+          <li>Poster Awards – ASCRS</li>
+          <li>Chairman’s OKAP Awards</li>
+          <li>John Aure Buesseler Award</li>
         </ul>
       </section>
 
-      <section id="leadership" class="card fade-in">
+      <section id="publications">
+        <h2>Research & Publications</h2>
+        <ul>
+          <li>Hirabayashi M, et al. Clinical outcomes of ICLs in shallow ACD eyes. <em>Clinical Ophthalmology</em>. 2024.</li>
+          <li>Hirabayashi M, et al. AI model for predicting ICL vault. <em>Journal of Cataract & Refractive Surgery</em>. 2024.</li>
+          <li>Hirabayashi M, et al. STODS Syndrome. <em>Diagnostics</em>. 2023.</li>
+          <li>Hirabayashi M, et al. Spherical aberration and IOLs. <em>Journal of Refractive Surgery</em>. 2023.</li>
+          <!-- Add more full citations as needed -->
+        </ul>
+      </section>
+
+      <section id="leadership">
         <h2>Leadership & Professional Service</h2>
         <ul>
-          <li>Founder – <a href="https://eyeflymd.com" target="_blank">EyeFlyMD</a>, <a href="https://refractivefoundations.com" target="_blank">Refractive Foundations</a></li>
+          <li>Founder – <a href="https://eyeflymd.com" target="_blank">EyeFlyMD</a></li>
+          <li>Founder – <a href="https://refractivefoundations.com" target="_blank">Refractive Foundations</a></li>
           <li>Co-Founder – Bimini AI, IOL Reference app</li>
           <li>Chief Resident – University of Missouri</li>
         </ul>
       </section>
 
-      <section id="interests" class="card fade-in">
+      <section id="interests">
         <h2>Interests</h2>
-        <p>Aviation & flight instruction · Photography – <a href="https://focusinglight.com" target="_blank">FocusingLight.com</a> · Sailing · Jazz Guitar · Wing Chun</p>
+        <ul>
+          <li>Aviation & Flight Instruction</li>
+          <li>Photography – <a href="https://focusinglight.com" target="_blank">FocusingLight.com</a></li>
+          <li>Sailing · Jazz Guitar · Wing Chun</li>
+        </ul>
       </section>
+
+      <footer>
+        <p>&copy; 2025 Matthew Hirabayashi, MD</p>
+      </footer>
     </main>
-
-    <footer>
-      <p>&copy; 2025 Matthew Hirabayashi, MD</p>
-    </footer>
   </div>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
