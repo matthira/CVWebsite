@@ -1,116 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matthew Hirabayashi, MD</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" />
-  <script src="https://kit.fontawesome.com/3d6efcf4fa.js" crossorigin="anonymous"></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-<body>
-  <div class="container">
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-      <h2>CONTENTS</h2>
-      <nav>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#honors">Honors & Awards</a>
-        <a href="#publications">Research & Publications</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#interests">Interests</a>
-        <a href="assets/cv.pdf" target="_blank">Download CV</a>
-      </nav>
-    </aside>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  min-height: 100vh;
+}
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <section class="intro">
-        <img src="./assets/headshot.png" alt="Matthew Hirabayashi headshot" class="headshot">
-        <h1>Matthew Hirabayashi, MD</h1>
-        <p>Ophthalmologist · Surgeon · Educator · Pilot</p>
-        <div class="social-icons">
-          <a href="mailto:matt@eyeflymd.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://eyeflymd.com" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
-          <a href="https://instagram.com/eyeflymd" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://youtube.com/@eyeflymd" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-      </section>
+/* Sidebar container */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  width: 220px;
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
 
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
-          <li>Refractive Surgery Fellowship – Parkhurst NuVision, 2024–Present</li>
-          <li>Ophthalmology Residency (Chief) – University of Missouri, 2020–2024</li>
-          <li>M.D. – University of Missouri, 2020</li>
-          <li>B.S. Biology (Summa Cum Laude) – Saint Louis University, 2016</li>
-        </ul>
-      </section>
+.sidebar h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
 
-      <section id="certifications">
-        <h2>Certifications & Licenses</h2>
-        <ul>
-          <li>WaveLight EX500, Contoura (ALCON)</li>
-          <li>EVO ICL, Stella (STAAR Surgical)</li>
-          <li>VISUMAX, SMILE, LASIK (ZEISS)</li>
-          <li>ALLY, CATALYS, ORA SYSTEM</li>
-          <li>Physician/Surgeon (TX)</li>
-          <li>Commercial & Instructor Pilot License</li>
-          <li>Wharton Business Foundations</li>
-        </ul>
-      </section>
+.sidebar nav a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
 
-      <section id="honors">
-        <h2>Honors & Awards</h2>
-        <ul>
-          <li>Young Ophthalmology Leaders Award – ASCRS</li>
-          <li>Poster Awards – ASCRS</li>
-          <li>Chairman’s OKAP Awards</li>
-          <li>John Aure Buesseler Award</li>
-        </ul>
-      </section>
+.sidebar nav a:hover {
+  color: #007bff;
+}
 
-      <section id="publications">
-        <h2>Research & Publications</h2>
-        <ul>
-          <li>Hirabayashi M, et al. Clinical outcomes of ICLs in shallow ACD eyes. <em>Clinical Ophthalmology</em>. 2024.</li>
-          <li>Hirabayashi M, et al. AI model for predicting ICL vault. <em>Journal of Cataract & Refractive Surgery</em>. 2024.</li>
-          <li>Hirabayashi M, et al. STODS Syndrome. <em>Diagnostics</em>. 2023.</li>
-          <li>Hirabayashi M, et al. Spherical aberration and IOLs. <em>Journal of Refractive Surgery</em>. 2023.</li>
-          <!-- Add more full citations as needed -->
-        </ul>
-      </section>
+/* Main content */
+.main {
+  margin-left: 280px;
+  padding: 2rem;
+  flex: 1;
+}
 
-      <section id="leadership">
-        <h2>Leadership & Professional Service</h2>
-        <ul>
-          <li>Founder – <a href="https://eyeflymd.com" target="_blank">EyeFlyMD</a></li>
-          <li>Founder – <a href="https://refractivefoundations.com" target="_blank">Refractive Foundations</a></li>
-          <li>Co-Founder – Bimini AI, IOL Reference app</li>
-          <li>Chief Resident – University of Missouri</li>
-        </ul>
-      </section>
+/* Section blocks */
+.section {
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
 
-      <section id="interests">
-        <h2>Interests</h2>
-        <ul>
-          <li>Aviation & Flight Instruction</li>
-          <li>Photography – <a href="https://focusinglight.com" target="_blank">FocusingLight.com</a></li>
-          <li>Sailing · Jazz Guitar · Wing Chun</li>
-        </ul>
-      </section>
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
 
-      <footer>
-        <p>&copy; 2025 Matthew Hirabayashi, MD</p>
-      </footer>
-    </main>
-  </div>
-</body>
-</html>
+.section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* Header & headshot */
+.header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-bottom: 2rem;
+}
+
+.headshot {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+/* Name and subtitle */
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Contact icons */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  color: #333;
+  font-size: 1.3rem;
+  transition: color 0.2s ease;
+}
+
+.contact-icons a:hover {
+  color: #007bff;
+}
+
+/* Mobile responsive sidebar */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sidebar nav a {
+    margin: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
