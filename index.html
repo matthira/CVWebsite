@@ -278,7 +278,22 @@
       const sidebar = document.querySelector('.sidebar');
       sidebar.classList.toggle('open');
     }
+
+    // Auto-collapse sidebar on link click (mobile)
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.sidebar nav a');
+      const sidebar = document.querySelector('.sidebar');
+      
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            sidebar.classList.remove('open');
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
+
 
