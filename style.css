@@ -1,0 +1,107 @@
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fefefe;
+  color: #333;
+  display: flex;
+}
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+.sidebar h1 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  margin-bottom: 1rem;
+}
+.sidebar a {
+  color: #fff;
+  font-weight: 500;
+}
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  margin-left: 260px;
+  padding: 2rem;
+  max-width: 800px;
+}
+section {
+  margin-bottom: 3rem;
+}
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.3rem;
+}
+
+/* Toggle Theme Button */
+#toggle-mode {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+#toggle-mode:hover {
+  background: #555;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #111;
+  color: #ddd;
+}
+body.dark .sidebar {
+  background: #000;
+}
+body.dark a {
+  color: #44aaff;
+}
+body.dark #toggle-mode {
+  background: #222;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
