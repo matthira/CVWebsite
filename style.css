@@ -104,9 +104,10 @@ body {
 /* Hamburger for Mobile */
 .hamburger {
   display: none;
-  position: fixed;
-  top: 16px;
-  left: 16px;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 1rem;
   z-index: 1100;
   background: white;
   border: none;
@@ -128,7 +129,7 @@ body {
   }
 
   .sidebar {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     transform: translateY(0);
@@ -138,6 +139,7 @@ body {
     border-radius: 0;
     padding: 0;
     transition: max-height 0.3s ease, padding 0.3s ease;
+    z-index: 1000;
   }
 
   .sidebar.open {
@@ -152,6 +154,6 @@ body {
   .main {
     margin-left: 0;
     padding: 1rem;
+    margin-top: 1rem; /* ensures content is pushed down */
   }
 }
-
