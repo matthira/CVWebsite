@@ -6,32 +6,41 @@
   <title>Matthew Hirabayashi, MD</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="sidebar">
-    <h1>Matthew Hirabayashi, MD</h1>
-    <ul>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#honors">Honors & Awards</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#speaking">Speaking</a></li>
-      <li><a href="#media">Media</a></li>
-      <li><a href="#community">Community</a></li>
-      <li><a href="#leadership">Leadership</a></li>
-      <li><a href="#interests">Interests</a></li>
-      <li><a href="assets/cv.pdf" target="_blank">Download CV</a></li>
-      <li><button id="toggle-mode">Toggle Theme</button></li>
-    </ul>
-  </nav>
+  <header>
+    <div class="container">
+      <img src="assets/headshot.png" alt="Matthew Hirabayashi headshot" class="headshot" />
+      <h1>Matthew Hirabayashi, MD</h1>
+      <p>Ophthalmologist · Surgeon · Educator · Pilot</p>
+      <div class="social-links">
+        <a href="mailto:matt@eyeflymd.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://eyeflymd.com" target="_blank" title="Personal Website"><i class="fas fa-globe"></i></a>
+        <a href="https://instagram.com/eyeflymd" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@eyeflymd" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <nav>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#honors">Honors</a>
+        <a href="#publications">Publications</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#interests">Interests</a>
+        <a href="assets/cv.pdf" target="_blank">Download CV</a>
+      </nav>
+    </div>
+  </header>
 
-  <main>
+  <main class="container">
     <section id="education">
       <h2>Education</h2>
-      <p>Refractive Surgery Fellowship – Parkhurst NuVision, 2024–Present<br />
-      Ophthalmology Residency (Chief) – University of Missouri, 2020–2024<br />
-      M.D. – University of Missouri, 2020<br />
-      B.S. Biology (Summa Cum Laude) – Saint Louis University, 2016</p>
+      <ul>
+        <li>Refractive Surgery Fellowship – Parkhurst NuVision, 2024–Present</li>
+        <li>Ophthalmology Residency (Chief) – University of Missouri, 2020–2024</li>
+        <li>M.D. – University of Missouri, 2020</li>
+        <li>B.S. Biology (Summa Cum Laude) – Saint Louis University, 2016</li>
+      </ul>
     </section>
 
     <section id="certifications">
@@ -58,30 +67,6 @@
       Multiple books including <em>Vision Correction</em>, <em>The Eye Guide</em> series.</p>
     </section>
 
-    <section id="speaking">
-      <h2>Speaking & Presentations</h2>
-      <ul>
-        <li>STAAR Surgeon Summit 2024 – EVO ICL, AI ICL Sizing</li>
-        <li>The Outliers – AI in Ophthalmology</li>
-        <li>Young MD Connect – Entrepreneurship</li>
-      </ul>
-    </section>
-
-    <section id="media">
-      <h2>Media Mentions</h2>
-      <ul>
-        <li>Cataract & Refractive Surgery Today</li>
-        <li>Young MD Connect</li>
-        <li>The Ophthalmologist</li>
-        <li>eyewire, MillennialEYE, Ophthalmology Breaking News</li>
-      </ul>
-    </section>
-
-    <section id="community">
-      <h2>Community Service</h2>
-      <p>Angel Flight pilot, STEM mentor (Wings of Hope), MedZou volunteer, senior teacher partnerships, guitar teacher at Doorways Housing.</p>
-    </section>
-
     <section id="leadership">
       <h2>Leadership & Professional Service</h2>
       <ul>
@@ -93,17 +78,15 @@
 
     <section id="interests">
       <h2>Interests</h2>
-      <p>Aviation & flight instruction<br />
-         Wildlife & seascape photography – <a href="https://focusinglight.com" target="_blank">FocusingLight.com</a><br />
-         Sailing, scuba, Wing Chun, jazz guitar</p>
+      <p>Aviation & flight instruction · Photography – <a href="https://focusinglight.com" target="_blank">FocusingLight.com</a> · Sailing · Jazz Guitar · Wing Chun</p>
     </section>
   </main>
 
-  <script>
-    const toggleBtn = document.getElementById('toggle-mode');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Matthew Hirabayashi, MD</p>
+    </div>
+  </footer>
 </body>
 </html>
+
