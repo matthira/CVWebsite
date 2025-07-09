@@ -107,10 +107,20 @@
   </div>
 
   <!-- Toggle Sidebar Script -->
-<script>
+ <script>
   function toggleMenu() {
     const wrapper = document.getElementById('sidebarWrapper');
+    const isOpen = wrapper.classList.contains('open');
+
+    // Toggle class
     wrapper.classList.toggle('open');
+
+    // Ensure the sidebar expands smoothly
+    if (!isOpen) {
+      wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+    } else {
+      wrapper.style.maxHeight = "0";
+    }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -121,13 +131,15 @@
       link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
           wrapper.classList.remove('open');
+          wrapper.style.maxHeight = "0";
         }
       });
     });
 
-    // Optional: close on resize to desktop
+    // Optional: reset height on window resize
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
+        wrapper.style.maxHeight = null;
         wrapper.classList.remove('open');
       }
     });
