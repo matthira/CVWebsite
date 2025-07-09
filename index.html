@@ -41,6 +41,7 @@
       border-radius: 16px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       z-index: 10;
+      transition: max-height 0.3s ease;
     }
 
     .sidebar h3 {
@@ -62,6 +63,21 @@
     .sidebar nav a:hover {
       color: #007BFF;
       font-weight: 600;
+    }
+
+    /* --- Hamburger Button --- */
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      z-index: 1000;
+      background: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     /* --- Main Content --- */
@@ -124,13 +140,26 @@
         flex-direction: column;
       }
 
+      .hamburger {
+        display: block;
+      }
+
       .sidebar {
         position: relative;
         top: unset;
         left: unset;
         transform: none;
         width: auto;
-        margin: 1rem auto;
+        margin: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: max-height 0.3s ease;
+      }
+
+      .sidebar.open {
+        max-height: 500px;
+        padding: 1.5rem;
       }
 
       .main {
@@ -140,20 +169,11 @@
     }
   </style>
 </head>
-   </section>
-  </div>
-
-  <script>
-    function toggleMenu() {
-      const sidebar = document.querySelector('.sidebar');
-      sidebar.classList.toggle('open');
-    }
-  </script>
 <body>
+
+  <!-- Hamburger Button -->
   <button class="hamburger" onclick="toggleMenu()">☰ Menu</button>
 
-  <!-- Sidebar Navigation -->
-  <div class="sidebar">
   <!-- Sidebar Navigation -->
   <div class="sidebar">
     <h3>Contents</h3>
@@ -219,10 +239,10 @@
     <section class="section" id="publications">
       <h2>Research & Publications</h2>
       <ul>
-        <li>Hirabayashi M, et al. Clinical outcomes of ICLs in shallow ACD eyes. *Clinical Ophthalmology*. 2024.</li>
-        <li>Hirabayashi M, et al. AI model for predicting ICL vault. *Journal of Cataract & Refractive Surgery*. 2024.</li>
-        <li>Hirabayashi M, et al. STODS Syndrome. *Diagnostics*. 2023.</li>
-        <li>Hirabayashi M, et al. Spherical aberration and IOLs. *Journal of Refractive Surgery*. 2023.</li>
+        <li>Hirabayashi M, et al. Clinical outcomes of ICLs in shallow ACD eyes. <em>Clinical Ophthalmology</em>. 2024.</li>
+        <li>Hirabayashi M, et al. AI model for predicting ICL vault. <em>Journal of Cataract & Refractive Surgery</em>. 2024.</li>
+        <li>Hirabayashi M, et al. STODS Syndrome. <em>Diagnostics</em>. 2023.</li>
+        <li>Hirabayashi M, et al. Spherical aberration and IOLs. <em>Journal of Refractive Surgery</em>. 2023.</li>
       </ul>
     </section>
 
@@ -251,5 +271,14 @@
     </section>
 
   </div>
+
+  <!-- Toggle Sidebar Script -->
+  <script>
+    function toggleMenu() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
+
