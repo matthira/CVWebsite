@@ -9,8 +9,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #111;
-  background-color: #fff;
-  padding-bottom: 4rem;
+  background-color: #f9f9f9;
 }
 a {
   color: #007acc;
@@ -27,46 +26,55 @@ em {
   font-style: italic;
 }
 
-/* Layout Containers */
+/* Container */
 .container {
   max-width: 720px;
-  margin: 0 auto;
-  padding: 1.5rem;
-  text-align: center;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Card Style */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
 /* Header */
-header {
-  padding-top: 2rem;
-  border-bottom: 1px solid #eee;
+header.card {
+  text-align: center;
 }
 header h1 {
   font-size: 2rem;
   font-weight: 600;
-  margin: 0.75rem 0 0.25rem;
+  margin-top: 1rem;
 }
 header p {
   font-size: 1rem;
   color: #555;
-  margin-bottom: 1rem;
+  margin-top: 0.25rem;
 }
 
 /* Headshot */
 .headshot {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  margin: 0 auto 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: block;
 }
 
-/* Social Links */
+/* Social Icons */
 .social-links {
-  margin: 1rem 0 1.5rem;
+  margin: 1rem 0;
 }
 .social-links a {
-  margin: 0 0.5rem;
+  margin: 0 0.6rem;
   color: #444;
   font-size: 1.2rem;
   transition: color 0.2s ease;
@@ -75,44 +83,31 @@ header p {
   color: #000;
 }
 
-/* Navigation */
-header nav {
+/* Navigation Links */
+nav {
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
-header nav a {
-  margin: 0 0.75rem;
+nav a {
+  margin: 0 0.6rem;
   font-size: 0.95rem;
-  color: #555;
+  color: #007acc;
 }
-header nav a:hover {
-  color: #000;
+nav a:hover {
+  color: #004e88;
 }
 
-/* Sections */
-section {
-  margin-top: 2.5rem;
-  text-align: left;
-}
+/* Section Titles */
 section h2 {
   font-size: 1.4rem;
   font-weight: 600;
   border-bottom: 1px solid #eee;
+  padding-bottom: 0.3rem;
   margin-bottom: 1rem;
-  padding-bottom: 0.25rem;
-}
-section p,
-section li {
-  color: #333;
-  font-size: 1rem;
 }
 
 /* Footer */
-footer {
-  border-top: 1px solid #eee;
+footer.card {
   text-align: center;
-  padding: 1rem 0;
   font-size: 0.9rem;
-  color: #888;
-  margin-top: 4rem;
+  color: #999;
 }
