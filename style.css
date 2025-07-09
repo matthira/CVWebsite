@@ -1,4 +1,4 @@
-/* Base Styling */
+/* --- Base Styles --- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0;
@@ -23,24 +23,29 @@ ul {
   padding-left: 1.2rem;
 }
 
-/* Sidebar Wrapper (for mobile) */
+/* --- Sidebar Wrapper --- */
 .sidebar-wrapper {
-  display: block;
+  position: fixed;
+  top: 60px;
+  left: 16px;
+  right: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  z-index: 1001;
 }
 
-/* Sidebar */
+.sidebar-wrapper.open {
+  max-height: 500px;
+  padding: 1rem 0;
+}
+
+/* --- Sidebar --- */
 .sidebar {
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  width: 180px;
   background-color: white;
-  padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  z-index: 1000;
-  transition: all 0.3s ease;
+  padding: 1.5rem;
 }
 
 .sidebar h3 {
@@ -64,7 +69,7 @@ ul {
   font-weight: 600;
 }
 
-/* Main Content */
+/* --- Main Content --- */
 .main {
   margin-left: 250px;
   padding: 2rem;
@@ -87,7 +92,7 @@ ul {
   to { opacity: 1; }
 }
 
-/* Header */
+/* --- Header Section --- */
 .header {
   text-align: center;
 }
@@ -101,7 +106,7 @@ ul {
   margin-bottom: 1rem;
 }
 
-/* Contact Icons */
+/* --- Contact Icons --- */
 .contact-icons {
   display: flex;
   justify-content: center;
@@ -119,7 +124,7 @@ ul {
   color: #007BFF;
 }
 
-/* Hamburger */
+/* --- Hamburger Button --- */
 .hamburger {
   display: none;
   position: fixed;
@@ -135,7 +140,7 @@ ul {
   cursor: pointer;
 }
 
-/* Responsive Styles */
+/* --- Responsive Styles --- */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -145,29 +150,21 @@ ul {
     display: block;
   }
 
-  .sidebar-wrapper {
-    width: 100%;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-  }
-
-  .sidebar-wrapper.open {
-    max-height: 1000px;
-  }
-
-  .sidebar {
-    position: static;
-    transform: none;
-    width: auto;
-    padding: 2rem 1.5rem 1rem;
-    margin: 0 1rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  }
-
   .main {
     margin-left: 0;
     padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .sidebar-wrapper {
+    left: 0;
+    right: 0;
+    top: 60px;
+    padding: 0;
+  }
+
+  .main,
+  .sidebar {
+    width: 100%;
   }
 }
