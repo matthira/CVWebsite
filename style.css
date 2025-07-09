@@ -29,15 +29,16 @@ ul {
   top: 60px;
   left: 16px;
   right: 16px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
   z-index: 1001;
-}
-
-.sidebar-wrapper.open {
   max-height: 500px;
   padding: 1rem 0;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    display: none !important;
+  }
 }
 
 /* --- Sidebar --- */
@@ -77,6 +78,13 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 1rem;
+  }
 }
 
 .section {
@@ -127,44 +135,10 @@ ul {
 /* --- Hamburger Button --- */
 .hamburger {
   display: none;
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  z-index: 1100;
-  background: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
 }
 
-/* --- Responsive Styles --- */
 @media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-
   .hamburger {
-    display: block;
-  }
-
-  .main {
-    margin-left: 0;
-    padding: 1rem;
-    margin-top: 1rem;
-  }
-
-  .sidebar-wrapper {
-    left: 0;
-    right: 0;
-    top: 60px;
-    padding: 0;
-  }
-
-  .main,
-  .sidebar {
-    width: 100%;
+    display: none !important;
   }
 }
