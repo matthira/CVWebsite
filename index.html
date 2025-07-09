@@ -140,8 +140,20 @@
     }
   </style>
 </head>
-<body>
+   </section>
+  </div>
 
+  <script>
+    function toggleMenu() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('open');
+    }
+  </script>
+<body>
+  <button class="hamburger" onclick="toggleMenu()">☰ Menu</button>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
   <!-- Sidebar Navigation -->
   <div class="sidebar">
     <h3>Contents</h3>
