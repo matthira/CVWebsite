@@ -9,8 +9,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <header class="card">
+  <div class="layout">
+    <aside class="sidebar">
       <img src="assets/headshot.png" alt="Matthew Hirabayashi headshot" class="headshot" />
       <h1>Matthew Hirabayashi, MD</h1>
       <p>Ophthalmologist · Surgeon · Educator · Pilot</p>
@@ -29,59 +29,74 @@
         <a href="#interests">Interests</a>
         <a href="assets/cv.pdf" target="_blank">Download CV</a>
       </nav>
-    </header>
+    </aside>
 
-    <section id="education" class="card">
-      <h2>Education</h2>
-      <ul>
-        <li>Refractive Surgery Fellowship – Parkhurst NuVision, 2024–Present</li>
-        <li>Ophthalmology Residency (Chief) – University of Missouri, 2020–2024</li>
-        <li>M.D. – University of Missouri, 2020</li>
-        <li>B.S. Biology (Summa Cum Laude) – Saint Louis University, 2016</li>
-      </ul>
-    </section>
+    <main class="content">
+      <section id="education" class="card fade-in">
+        <h2>Education</h2>
+        <ul>
+          <li>Refractive Surgery Fellowship – Parkhurst NuVision, 2024–Present</li>
+          <li>Ophthalmology Residency (Chief) – University of Missouri, 2020–2024</li>
+          <li>M.D. – University of Missouri, 2020</li>
+          <li>B.S. Biology (Summa Cum Laude) – Saint Louis University, 2016</li>
+        </ul>
+      </section>
 
-    <section id="certifications" class="card">
-      <h2>Certifications & Licenses</h2>
-      <ul>
-        <li>WaveLight EX500, Contoura (ALCON)</li>
-        <li>EVO ICL, Stella (STAAR Surgical)</li>
-        <li>VISUMAX, SMILE, LASIK (ZEISS)</li>
-        <li>ALLY, CATALYS, ORA SYSTEM</li>
-        <li>Physician/Surgeon (TX)</li>
-        <li>Commercial & Instructor Pilot License</li>
-        <li>Wharton Business Foundations</li>
-      </ul>
-    </section>
+      <section id="certifications" class="card fade-in">
+        <h2>Certifications & Licenses</h2>
+        <ul>
+          <li>WaveLight EX500, Contoura (ALCON)</li>
+          <li>EVO ICL, Stella (STAAR Surgical)</li>
+          <li>VISUMAX, SMILE, LASIK (ZEISS)</li>
+          <li>ALLY, CATALYS, ORA SYSTEM</li>
+          <li>Physician/Surgeon (TX)</li>
+          <li>Commercial & Instructor Pilot License</li>
+          <li>Wharton Business Foundations</li>
+        </ul>
+      </section>
 
-    <section id="honors" class="card">
-      <h2>Honors & Awards</h2>
-      <p>Young Ophthalmology Leaders Award, ASCRS Poster Awards, Chairman’s OKAP Awards, John Aure Buesseler Award, and more.</p>
-    </section>
+      <section id="honors" class="card fade-in">
+        <h2>Honors & Awards</h2>
+        <p>Young Ophthalmology Leaders Award, ASCRS Poster Awards, Chairman’s OKAP Awards, John Aure Buesseler Award, and more.</p>
+      </section>
 
-    <section id="publications" class="card">
-      <h2>Research & Publications</h2>
-      <p>20+ peer-reviewed papers on ICLs, glaucoma, cataract surgery, AI vault prediction, etc.<br />
-      Multiple books including <em>Vision Correction</em>, <em>The Eye Guide</em> series.</p>
-    </section>
+      <section id="publications" class="card fade-in">
+        <h2>Research & Publications</h2>
+        <p>20+ peer-reviewed papers on ICLs, glaucoma, cataract surgery, AI vault prediction, etc.<br />
+        Multiple books including <em>Vision Correction</em>, <em>The Eye Guide</em> series.</p>
+      </section>
 
-    <section id="leadership" class="card">
-      <h2>Leadership & Professional Service</h2>
-      <ul>
-        <li>Founder – <a href="https://eyeflymd.com" target="_blank">EyeFlyMD</a>, <a href="https://refractivefoundations.com" target="_blank">Refractive Foundations</a></li>
-        <li>Co-Founder – Bimini AI, IOL Reference app</li>
-        <li>Chief Resident – University of Missouri</li>
-      </ul>
-    </section>
+      <section id="leadership" class="card fade-in">
+        <h2>Leadership & Professional Service</h2>
+        <ul>
+          <li>Founder – <a href="https://eyeflymd.com" target="_blank">EyeFlyMD</a>, <a href="https://refractivefoundations.com" target="_blank">Refractive Foundations</a></li>
+          <li>Co-Founder – Bimini AI, IOL Reference app</li>
+          <li>Chief Resident – University of Missouri</li>
+        </ul>
+      </section>
 
-    <section id="interests" class="card">
-      <h2>Interests</h2>
-      <p>Aviation & flight instruction · Photography – <a href="https://focusinglight.com" target="_blank">FocusingLight.com</a> · Sailing · Jazz Guitar · Wing Chun</p>
-    </section>
+      <section id="interests" class="card fade-in">
+        <h2>Interests</h2>
+        <p>Aviation & flight instruction · Photography – <a href="https://focusinglight.com" target="_blank">FocusingLight.com</a> · Sailing · Jazz Guitar · Wing Chun</p>
+      </section>
 
-    <footer class="card">
-      <p>&copy; 2025 Matthew Hirabayashi, MD</p>
-    </footer>
+      <footer class="footer">
+        <p>&copy; 2025 Matthew Hirabayashi, MD</p>
+      </footer>
+    </main>
   </div>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fader => observer.observe(fader));
+  </script>
 </body>
 </html>
