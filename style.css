@@ -150,9 +150,6 @@ body {
     overflow-y: auto;
   }
 
-  .close-sidebar {
-    display: block;
-  }
 
   .main {
     margin-left: 0;
