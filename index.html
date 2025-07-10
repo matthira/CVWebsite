@@ -5,177 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Matthew Hirabayashi, MD</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    /* --- Base Styling --- */
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      background-color: #f9f9f9;
-      scroll-behavior: smooth;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    h1, h2 {
-      margin: 0 0 1rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    /* --- Sidebar --- */
-    .sidebar {
-      position: fixed;
-      top: 50%;
-      left: 20px;
-      transform: translateY(-50%);
-      width: 180px;
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      z-index: 10;
-      transition: max-height 0.3s ease;
-    }
-
-    .sidebar h3 {
-      margin-top: 0;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .sidebar nav a {
-      display: block;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-      color: #333;
-      transition: all 0.3s ease;
-    }
-
-    .sidebar nav a:hover {
-      color: #007BFF;
-      font-weight: 600;
-    }
-
-    /* --- Main Content --- */
-    .main {
-      margin-left: 250px;
-      padding: 2rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .section {
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      opacity: 0;
-      animation: fadeIn 1s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    /* --- Header & Contact --- */
-    .header {
-      text-align: center;
-    }
-
-    .headshot {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1rem;
-    }
-
-    .contact-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      margin-top: 1rem;
-      font-size: 1.3rem;
-    }
-
-    .contact-icons a {
-      color: #444;
-      transition: color 0.3s ease;
-    }
-
-    .contact-icons a:hover {
-      color: #007BFF;
-    }
-
-    /* --- Responsive Design --- */
-    @media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    position: fixed; /* change from relative */
-    top: 60px; /* below the hamburger */
-    left: 16px;
-    right: 16px;
-    width: auto;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0;
-    border-radius: 16px;
-    z-index: 1001;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-  }
-
-  .sidebar.open {
-    max-height: 500px;
-    padding: 1.5rem;
-  }
-
-  .main {
-    margin-left: 0;
-    padding: 1rem;
-  }
-}
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
   <!-- Sidebar Navigation -->
   <div class="sidebar" id="sidebar">
-  <h3>Contents</h3>
-  <nav>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#honors">Honors & Awards</a>
-    <a href="#publications">Research & Publications</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#interests">Interests</a>
-    <a href="#cv">Download CV</a>
-  </nav>
-</div>
+    <h3>Contents</h3>
+    <nav>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#honors">Honors & Awards</a>
+      <a href="#publications">Research & Publications</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#interests">Interests</a>
+      <a href="#cv">Download CV</a>
+    </nav>
+  </div>
 
   <!-- Main Content -->
   <div class="main">
 
     <!-- Header Section -->
-    <section class="section header">
+    <section class="section fade-in header">
       <img src="assets/Matt Hirabayashi Headshot Circle Small.png" alt="Matthew Hirabayashi headshot" class="headshot" />
       <h1>Matthew Hirabayashi, MD</h1>
       <p>Ophthalmologist · Surgeon · Educator · Pilot</p>
@@ -187,86 +39,29 @@
       </div>
     </section>
 
-    <!-- Education -->
-    <section class="section" id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Refractive Surgery Fellowship – Parkhurst NuVision, 2024–Present</li>
-        <li>Ophthalmology Residency (Chief) – University of Missouri, 2020–2024</li>
-        <li>M.D. – University of Missouri, 2020</li>
-        <li>B.S. Biology (Summa Cum Laude) – Saint Louis University, 2016</li>
-      </ul>
-    </section>
-
-    <!-- Certifications -->
-    <section class="section" id="certifications">
-      <h2>Certifications & Licenses</h2>
-      <ul>
-        <li>WaveLight EX500, Contoura (ALCON)</li>
-        <li>EVO ICL, Stella (STAAR Surgical)</li>
-        <li>VISUMAX, SMILE, LASIK (ZEISS)</li>
-        <li>ALLY, CATALYS, ORA SYSTEM</li>
-        <li>Physician/Surgeon (TX)</li>
-        <li>Commercial & Instructor Pilot License</li>
-        <li>Wharton Business Foundations</li>
-      </ul>
-    </section>
-
-    <!-- Honors -->
-    <section class="section" id="honors">
-      <h2>Honors & Awards</h2>
-      <p>Young Ophthalmology Leaders Award, ASCRS Poster Awards, Chairman’s OKAP Awards, John Aure Buesseler Award, and more.</p>
-    </section>
-
-    <!-- Publications -->
-    <section class="section" id="publications">
-      <h2>Research & Publications</h2>
-      <ul>
-        <li>Hirabayashi M, et al. Clinical outcomes of ICLs in shallow ACD eyes. <em>Clinical Ophthalmology</em>. 2024.</li>
-        <li>Hirabayashi M, et al. AI model for predicting ICL vault. <em>Journal of Cataract & Refractive Surgery</em>. 2024.</li>
-        <li>Hirabayashi M, et al. STODS Syndrome. <em>Diagnostics</em>. 2023.</li>
-        <li>Hirabayashi M, et al. Spherical aberration and IOLs. <em>Journal of Refractive Surgery</em>. 2023.</li>
-      </ul>
-    </section>
-
-    <!-- Leadership -->
-    <section class="section" id="leadership">
-      <h2>Leadership & Service</h2>
-      <ul>
-        <li>Chief Resident, Ophthalmology, University of Missouri</li>
-        <li>Resident Ambassador – AAO Mid-Year Forum</li>
-        <li>Medical Mission Volunteer – Vision Outreach International</li>
-      </ul>
-    </section>
-
-    <!-- Interests -->
-    <section class="section" id="interests">
-      <h2>Interests & Skills</h2>
-      <ul>
-        <li>Aviation (Commercial + CFI), Videography, Public Speaking, Python, Adobe Suite</li>
-      </ul>
-    </section>
-
-    <!-- CV Download -->
-    <section class="section" id="cv">
-      <h2>Download CV</h2>
-      <p><a href="assets/Matthew_Hirabayashi_CV.pdf" target="_blank">Click here to download full CV (PDF)</a></p>
-    </section>
+    <!-- Remaining Sections -->
+    <section class="section fade-in" id="education">...</section>
+    <section class="section fade-in" id="certifications">...</section>
+    <section class="section fade-in" id="honors">...</section>
+    <section class="section fade-in" id="publications">...</section>
+    <section class="section fade-in" id="leadership">...</section>
+    <section class="section fade-in" id="interests">...</section>
+    <section class="section fade-in" id="cv">...</section>
 
   </div>
 
-  <!-- Toggle Sidebar Script -->
+  <!-- Scripts -->
   <script>
+    // Sidebar toggle (for mobile if needed)
     function toggleMenu() {
       const sidebar = document.querySelector('.sidebar');
       sidebar.classList.toggle('open');
     }
 
-    // Auto-collapse sidebar on link click (mobile)
     document.addEventListener('DOMContentLoaded', () => {
       const links = document.querySelectorAll('.sidebar nav a');
       const sidebar = document.querySelector('.sidebar');
-      
+
       links.forEach(link => {
         link.addEventListener('click', () => {
           if (window.innerWidth <= 768) {
@@ -274,6 +69,23 @@
           }
         });
       });
+
+      // Fade-in on scroll
+      const faders = document.querySelectorAll('.fade-in');
+
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      });
+
+      faders.forEach(fader => appearOnScroll.observe(fader));
     });
   </script>
 </body>
