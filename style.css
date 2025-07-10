@@ -54,19 +54,24 @@ body {
   gap: 2rem;
 }
 
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Cards */
 .section {
   background: white;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  opacity: 0;
-  animation: fadeIn 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
 }
 
 /* Header & Headshot */
@@ -101,7 +106,7 @@ body {
   color: #007BFF;
 }
 
-/* Hamburger for Mobile */
+/* Hamburger (if used later) */
 .hamburger {
   display: none;
   position: fixed;
@@ -117,14 +122,9 @@ body {
   cursor: pointer;
 }
 
-
-/* Responsive Mobile Layout */
+/* Responsive */
 @media (max-width: 768px) {
   body {
-    display: block;
-  }
-
-  .hamburger {
     display: block;
   }
 
@@ -149,7 +149,6 @@ body {
     padding: 2.5rem 1.5rem 1.5rem;
     overflow-y: auto;
   }
-
 
   .main {
     margin-left: 0;
