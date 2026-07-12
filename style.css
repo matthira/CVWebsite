@@ -57,7 +57,7 @@ body {
 }
 
 a {
-  color: #007BFF; /* your preferred link color */
+  color: #007BFF;
   text-decoration: none;
 }
 
@@ -66,7 +66,7 @@ a:hover {
 }
 
 a:visited {
-  color: #007BFF; /* match unvisited link color */
+  color: #007BFF;
 }
 
 /* Fade-in Animation */
@@ -121,6 +121,30 @@ a:visited {
   color: #007BFF;
 }
 
+/* ==========================
+   Photo Gallery
+========================== */
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.photo-gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .sidebar {
@@ -131,5 +155,9 @@ a:visited {
     margin-left: 0;
     padding: 1rem;
     margin-top: 1rem;
+  }
+
+  .photo-gallery {
+    grid-template-columns: 1fr;
   }
 }
