@@ -409,38 +409,56 @@
 
   </div>
 
-  <!-- Scripts -->
-  <script>
+ <!-- Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
     // Auto-collapse sidebar on link click (mobile)
-    document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('.sidebar nav a');
-      const sidebar = document.querySelector('.sidebar');
+    const links = document.querySelectorAll('.sidebar nav a');
+    const sidebar = document.querySelector('.sidebar');
 
-      links.forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 768) {
-            sidebar.classList.remove('open');
-          }
-        });
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          sidebar.classList.remove('open');
+        }
       });
-
-      // Fade-in on scroll
-      const faders = document.querySelectorAll('.fade-in');
-
-      const appearOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-      });
-
-      faders.forEach(fader => appearOnScroll.observe(fader));
     });
-  </script>
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+
+    // ==========================
+    // Photo Gallery
+    // ==========================
+    const gallery = document.getElementById('photo-gallery');
+
+    if (gallery) {
+      for (let i = 1; i <= 12; i++) {
+        const img = document.createElement('img');
+        img.src = `assets/photos/${i}.jpg`;
+        img.alt = `Photo ${i}`;
+        img.loading = "lazy";
+
+        gallery.appendChild(img);
+      }
+    }
+
+  });
+</script>
 </body>
 </html>
