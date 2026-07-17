@@ -1,25 +1,367 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <!-- Redirect root domain to www -->
   <script>
     if (location.hostname === "matthira.com") {
-      location.href = "https://www.matthira.com" + location.pathname + location.search + location.hash;
+      location.href =
+        "https://www.matthira.com" +
+        location.pathname +
+        location.search +
+        location.hash;
     }
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Matthew Hirabayashi, MD</title>
 
-  <!-- Favicon and platform icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="/site.webmanifest"> <!-- Optional: if you created one -->
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="style.css">
+  <title>
+    Matthew Hirabayashi, MD | Ophthalmologist | Vision Correction &amp; Cataract Surgeon
+  </title>
+
+  <meta
+    name="description"
+    content="Matthew Hirabayashi, MD is a board-certified ophthalmologist and fellowship-trained vision correction and cataract surgeon specializing in EVO ICL, SMILE, LASIK, PRK, refractive lens exchange, laser cataract surgery, and ophthalmic innovation."
+  >
+
+  <meta
+    name="author"
+    content="Matthew Hirabayashi, MD"
+  >
+
+  <link
+    rel="canonical"
+    href="https://www.matthira.com/"
+  >
+
+  <!-- Favicons -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/apple-touch-icon.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon-32x32.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon-16x16.png"
+  >
+
+  <link
+    rel="icon"
+    href="/assets/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <link
+    rel="manifest"
+    href="/site.webmanifest"
+  >
+
+  <!-- Open Graph -->
+  <meta
+    property="og:type"
+    content="profile"
+  >
+
+  <meta
+    property="og:title"
+    content="Matthew Hirabayashi, MD"
+  >
+
+  <meta
+    property="og:description"
+    content="Vision Correction and Cataract Surgeon specializing in EVO ICL, SMILE, LASIK, PRK, refractive cataract surgery, education, innovation, and research."
+  >
+
+  <meta
+    property="og:url"
+    content="https://www.matthira.com/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Matthew Hirabayashi, MD"
+  >
+
+  <meta
+    property="og:image"
+    content="https://www.matthira.com/assets/Matt%20Hirabayashi%20Headshot%20Circle%20Small.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Matthew Hirabayashi, MD"
+  >
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Matthew Hirabayashi, MD"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Vision Correction and Cataract Surgeon"
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://www.matthira.com/assets/Matt%20Hirabayashi%20Headshot%20Circle%20Small.png"
+  >
+
+  <meta
+    name="twitter:image:alt"
+    content="Matthew Hirabayashi, MD"
+  >
+
+  <!-- Stylesheets -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.matthira.com/#website",
+        "url": "https://www.matthira.com/",
+        "name": "Matthew Hirabayashi, MD",
+        "publisher": {
+          "@id": "https://www.matthira.com/#person"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://www.matthira.com/#profile-page",
+        "url": "https://www.matthira.com/",
+        "name": "Matthew Hirabayashi, MD",
+        "description": "Professional profile, curriculum vitae, publications, research, innovations, clinical trials, presentations, surgical videos, and photography of Matthew Hirabayashi, MD.",
+        "isPartOf": {
+          "@id": "https://www.matthira.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://www.matthira.com/#person"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://www.matthira.com/#headshot"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://www.matthira.com/#headshot",
+        "url": "https://www.matthira.com/assets/Matt%20Hirabayashi%20Headshot%20Circle%20Small.png",
+        "contentUrl": "https://www.matthira.com/assets/Matt%20Hirabayashi%20Headshot%20Circle%20Small.png",
+        "caption": "Matthew Hirabayashi, MD"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.matthira.com/#person",
+        "name": "Matthew Hirabayashi, MD",
+        "givenName": "Matthew",
+        "familyName": "Hirabayashi",
+        "honorificPrefix": "Dr.",
+        "honorificSuffix": "MD",
+        "url": "https://www.matthira.com/",
+        "mainEntityOfPage": {
+          "@id": "https://www.matthira.com/#profile-page"
+        },
+        "image": {
+          "@id": "https://www.matthira.com/#headshot"
+        },
+        "email": "matt@eyeflymd.com",
+        "jobTitle": "Vision Correction and Cataract Surgeon",
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Ophthalmologist"
+        },
+        "description": "Board-certified ophthalmologist and fellowship-trained vision correction and cataract surgeon specializing in EVO ICL, SMILE, LASIK, PRK, refractive lens exchange, laser cataract surgery, education, innovation, research, and ophthalmic technology.",
+        "nationality": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "knowsAbout": [
+          "Ophthalmology",
+          "Vision correction",
+          "Refractive surgery",
+          "Cataract surgery",
+          "EVO ICL",
+          "Implantable Collamer Lens surgery",
+          "SMILE laser vision correction",
+          "LASIK",
+          "PRK",
+          "CTAK",
+          "Refractive lens exchange",
+          "Laser cataract surgery",
+          "Premium intraocular lenses",
+          "Ophthalmic artificial intelligence",
+          "Medical education",
+          "Medical innovation"
+        ],
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Saint Louis University"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Missouri School of Medicine"
+          }
+        ],
+        "worksFor": [
+          {
+            "@id": "https://www.matthira.com/#amarillo-nuvision"
+          },
+          {
+            "@id": "https://www.matthira.com/#parkhurst-nuvision"
+          }
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Board Certification",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "American Board of Ophthalmology"
+            }
+          }
+        ],
+        "award": [
+          "First Place Poster, ASCRS, 2026",
+          "Young Ophthalmology Leaders Award, AECOS and Cedars Aspens, 2024",
+          "Best of Poster Session, ASCRS, 2024",
+          "Chairman's Award for Outstanding OKAP Score, University of Missouri, 2023"
+        ],
+        "memberOf": [
+          {
+            "@type": "Organization",
+            "name": "Alpha Omega Alpha Honor Medical Society"
+          }
+        ],
+        "sameAs": [
+          "https://eyeflymd.com/",
+          "https://www.instagram.com/eyeflymd/",
+          "https://www.youtube.com/@eyeflymd"
+        ]
+      },
+      {
+        "@type": "MedicalOrganization",
+        "@id": "https://www.matthira.com/#amarillo-nuvision",
+        "name": "Amarillo NuVision",
+        "url": "https://amarillonuvision.com/",
+        "description": "Ophthalmology practice providing vision correction and cataract surgery."
+      },
+      {
+        "@type": "MedicalOrganization",
+        "@id": "https://www.matthira.com/#parkhurst-nuvision",
+        "name": "Parkhurst NuVision",
+        "url": "https://sanantonio-lasik.com/",
+        "description": "Ophthalmology practice providing vision correction and cataract surgery."
+      },
+      {
+        "@type": "Book",
+        "@id": "https://www.matthira.com/#vision-correction-second-edition",
+        "name": "Vision Correction: Introduction to Modern Refractive Surgery Second Edition",
+        "isbn": "9798290480671",
+        "url": "https://www.amazon.com/dp/B0FGFSXNWT",
+        "datePublished": "2025",
+        "inLanguage": "en-US",
+        "author": {
+          "@id": "https://www.matthira.com/#person"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://www.matthira.com/#vision-correction-first-edition",
+        "name": "Vision Correction: Introduction to Modern Refractive Surgery",
+        "isbn": "9798305423129",
+        "url": "https://www.amazon.com/dp/B0DRYW1MYW",
+        "datePublished": "2025",
+        "inLanguage": "en-US",
+        "author": {
+          "@id": "https://www.matthira.com/#person"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://www.matthira.com/#focusing-light",
+        "name": "Focusing Light: The Science of Photography",
+        "isbn": "9798309739110",
+        "url": "https://www.amazon.com/dp/B0DWJG1XPD",
+        "datePublished": "2024",
+        "inLanguage": "en-US",
+        "author": {
+          "@id": "https://www.matthira.com/#person"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://www.matthira.com/#eye-guide-eye-exam",
+        "name": "The Eye Guide: The Eye Exam",
+        "isbn": "9798369938799",
+        "url": "https://www.amazon.com/dp/B0BRDFBZDB",
+        "datePublished": "2023",
+        "inLanguage": "en-US",
+        "author": {
+          "@id": "https://www.matthira.com/#person"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://www.matthira.com/#eye-guide-cataract-surgery",
+        "name": "The Eye Guide: Cataract Surgery",
+        "isbn": "9798365363342",
+        "url": "https://www.amazon.com/dp/B0BN1STFJ9",
+        "datePublished": "2022",
+        "inLanguage": "en-US",
+        "author": {
+          "@id": "https://www.matthira.com/#person"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://www.matthira.com/#eye-guide-anatomy-optics",
+        "name": "The Eye Guide: Anatomy and Optics",
+        "isbn": "9798364789389",
+        "url": "https://www.amazon.com/dp/B0BN1XBGQV",
+        "datePublished": "2022",
+        "inLanguage": "en-US",
+        "author": {
+          "@id": "https://www.matthira.com/#person"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
   
 <body>
@@ -211,7 +553,7 @@
     <!-- Publications -->
     <section class="section fade-in" id="publications">
       <h2>Research & Publications</h2>
-      <h3>Peer Reviewed Publications</h2>
+      <h3>Peer Reviewed Publications</h3>
       <ul>
         <li>Dynamic Changes in Implantable Collamer Lens Vault and Anterior Chamber Angle Under Varying Lighting Conditions. Hirabayashi M, Cantu E, Abramson A, Virdi G, Nasser T, Parkhurst G. <em>Clinical Ophthalmology</em>. April 2026. <a href="https://doi.org/10.2147/OPTH.S603534" target="_blank">doi.org/10.2147/OPTH.S603534</a></li>
         <li>Phakic Intraocular Lenses as a Potential Treatment for Pigment Dispersion Syndrome. Hirabayashi M, Cooley A, Shakarchi F, Vanrachack A, Ducker L, Shelby C, Coleman W, Parkhurst G, LoBue S. <em>Cureus</em>. February 2026. <a href="https://doi.org/10.7759/cureus.108051" target="_blank">doi.org/10.7759/cureus.108051</a></li>
@@ -239,7 +581,7 @@
         <li>Comparison of Outcome Predictors for MicroPulse Laser Trabeculoplasty and Selective Laser Trabeculoplasty. Hirabayashi M, Rosenlof T, An J. <em>Clinical Ophthalmology</em>. 2019; 13:1001-1009. <a href="https://doi.org/10.2147/opth.s205977" target="_blank">doi.org/10.2147/opth.s205977</a></li>
         <li>Outcome of Phacoemulsification Combined with Excisional Goniotomy using the Kahook Dual Blade in Severe Glaucoma Patients at 6 months. Hirabayashi M, King J, Lee D, An J. <em>Clinical Ophthalmology</em>. 2019; 13:715-721. <a href="https://doi.org/10.2147/opth.s196105" target="_blank">doi.org/10.2147/opth.s196105</a></li>
       </ul>
-      <h3>Non-Peer Reviewed Publications</h2>
+      <h3>Non-Peer Reviewed Publications</h3>
       <ul>
         <li><a href="https://digital.ophthalmologymanagement.com/articles/low-myopes-get-new-options" target="_blank">Low Myopes Get New Options</a>. Hirabayashi M, Parkhurst G. <em>Ophthalmology Management</em>. August 2024.</li>
         <li>One Size Does Not Fit All. Hirabayashi M, An J. <em>The Ophthalmologist</em>. March 2023.</li>
@@ -250,19 +592,19 @@
         <li><a href="https://glaucomaphysician.net/issues/2021/december/laser-trabeculoplasty-in-the-treatment-of-open-angle-glaucoma/" target="_blank">Laser Trabeculoplasty in the Treatment of Open-angle Glaucoma</a>. Hirabayashi M, An J. <em>Glaucoma Physician</em>. December 2021.</li>
         <li><a href="https://www.aao.org/eyenet/article/the-curious-case-of-cysts-and-sight" target="_blank">The Curious Case of Cysts and Sight</a>. Dailey E, Thomsen S, Davis G, Davis R, Hirabayashi M, Ponnusamy V. <em>EyeNet Magazine</em>. January 2019.</li>
       </ul>
-      <h3>International Poster Presentations</h2>
+      <h3>International Poster Presentations</h3>
       <ul>
         <li>Hirabayashi M, King J, Lee D, An J. Outcome of Phacoemulsification with Kahook Dual Blade Goniotomy in Severe Glaucoma at 6 months. Poster Presented at: 8th World Glaucoma Congress; April, 2019; Melbourne, Victoria. </li>
         <li>Hirabayashi M, King J, Lee D, Thomsen S, An J. Comparison of ab-interno 360-degree Trabeculotomy and ab-interno Trabeculectomy using Dual Blade. Presented at: 8th World Glaucoma Congress; April, 2019; Melbourne, Victoria.</li>
         <li>Hirabayashi M, Rosenlof T, An J. Comparison of Outcome Predictors for MLT and SLT. Presented at: 8th World Glaucoma Congress; April, 2019; Melbourne, Victoria.</li>
       </ul>
-      <h3>National Poster Presentations</h2>
+      <h3>National Poster Presentations</h3>
       <ul>
         <li>Hirabayashi M, Virdi G, Johnson S, Davis G, Relationship between Corneal Aberrations and Prediction Error of the Barrett Il IOL Formula. Presented at: ASCRS 2024; March 2024; Boston, MA.</li>
         <li>Hirabayashi M, Gharabagi A, Hesemann N, Johnson S, Webel A, Petroski G, Davis G. Spherical aberration of cataractous eyes and its relationship with age, ocular biometry, and various IOL platforms. Presented at: Young MD Connect Live; March 2023; Austin, TX.</li>
         <li>Hirabayashi M, Ponnusamy V, An J. Predictive Factors for Outcomes of Selective Laser Trabeculoplasty. Presented at: 2019 American Glaucoma Society Meeting; April, 2019; San Francisco, CA.</li>
       </ul>
-      <h3>Books</h2>
+      <h3>Books</h3>
       <ul>
         <li><a href="https://www.amazon.com/dp/B0FGFSXNWT" target="_blank">Vision Correction: Introduction to Modern Refractive Surgery Second Edition</a>. Hirabayashi M, Nasser T, Parkhurst G. <em>KDP</em>; 2025. ISBN: 979-8290480671.</li>
         <li><a href="https://www.amazon.com/dp/B0DRYW1MYW" target="_blank">Vision Correction: Introduction to Modern Refractive Surgery</a>. Hirabayashi M, Nasser T, Parkhurst G. <em>KDP</em>; 2025. ISBN: 979-8305423129.</li>
@@ -271,16 +613,17 @@
         <li><a href="https://www.amazon.com/dp/B0BN1STFJ9" target="_blank">The Eye Guide: Cataract Surgery</a>. Hirabayashi M. <em>KDP</em>; 2022. ISBN: 979-8365363342.</li>
         <li><a href="https://www.amazon.com/dp/B0BN1XBGQV" target="_blank">The Eye Guide: Anatomy and Optics</a>. Hirabayashi M. <em>KDP</em>; 2022. ISBN: 979-8364789389.</li>
       </ul>
-      <h3>Book Chapters</h2>
+      <h3>Book Chapters</h3>
       <ul>
         <li>Hirabayashi M, Johnson S. 2023. "Chapter 23: Cataract Surgery in the Hypotonous Eye." In Cataract Surgery in the Glaucoma Patient, by Johnson S. Springer Science+Business Media. doi: 10.1007/978-0-387-09408-3_23</li>
       </ul>
-      <h3>Peer Reviewer</h2>
+      <h3>Peer Reviewer</h3>
       <ul>
         <li>Journal of Glaucoma</li>
       </ul>
-      <h3>Presentations, Lectures, and Speaking Engagements</h2>
+      <h3>Presentations, Lectures, and Speaking Engagements</h3>
       <ul>
+        <li>Exploring the TECNIS™ Advantage, J&J Peer-to-Peer Program (2026)</li>
         <li>TECNIS™ PureSee IOL Pure Ease of Mind, Eyeprentice (2026)</li>
         <li>TECNIS™ Portfolio: Leveraging Premium IOL Technologies, J&J Peer-to-Peer Program (2026)</li>
         <li>Leveraging Premium TECNIS™ IOL Technologies, ASCRS (2026)</li>
