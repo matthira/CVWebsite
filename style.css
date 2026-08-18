@@ -161,3 +161,31 @@ a:visited {
     grid-template-columns: 1fr;
   }
 }
+
+/* For Patients button */
+.patients-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 11px 22px;
+  border: 1px solid #222;
+  border-radius: 999px;
+  color: #222;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.patients-button:hover {
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+}
+
+.patients-button:visited {
+  color: #222;
+}
+
+.patients-button:visited:hover {
+  color: #fff;
+}
