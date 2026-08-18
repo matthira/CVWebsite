@@ -1,1 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <!-- Redirect root domain to www -->
+  <script>
+    if (location.hostname === "matthira.com") {
+      location.href =
+        "https://www.matthira.com" +
+        location.pathname +
+        location.search +
+        location.hash;
+    }
+  </script>
+
+  <title>
+    For Patients | Vision Correction &amp; Cataract Surgery | Matthew Hirabayashi, MD
+  </title>
+
+  <meta
+    name="description"
+    content="Patient education from Matthew Hirabayashi, MD about EVO ICL, LASIK, PRK, SMILE, refractive lens exchange, cataract surgery, candidacy, recovery, and modern vision correction options."
+  >
+
+  <meta
+    name="author"
+    content="Matthew Hirabayashi, MD"
+  >
+
+  <link
+    rel="canonical"
+    href="https://www.matthira.com/for-patients/"
+  >
+
+
+  <!-- Favicons -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/apple-touch-icon.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/favicon-32x32.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/favicon-16x16.png"
+  >
+
+  <link
+    rel="icon"
+    href="/assets/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <link
+    rel="manifest"
+    href="/site.webmanifest"
+  >
+
+
+  <!-- Open Graph -->
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="For Patients | Matthew Hirabayashi, MD"
+  >
+
+  <meta
+    property="og:description"
+    content="Learn about EVO ICL, LASIK, PRK, SMILE, lens replacement, cataract surgery, recovery, and modern vision correction."
+  >
+
+  <meta
+    property="og:url"
+    content="https://www.matthira.com/for-patients/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Matthew Hirabayashi, MD"
+  >
+
+  <meta
+    property="og:image"
+    content="https://www.matthira.com/assets/Matt%20Hirabayashi%20Headshot%20Circle%20Small.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Matthew Hirabayashi, MD"
+  >
+
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="For Patients | Matthew Hirabayashi, MD"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Patient education about EVO ICL, LASIK, PRK, SMILE, lens replacement, and cataract surgery."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://www.matthira.com/assets/Matt%20Hirabayashi%20Headshot%20Circle%20Small.png"
+  >
+
+
+  <!-- Existing Main Site CSS -->
+  <link
+    rel="stylesheet"
+    href="../style.css"
+  >
+
+
+  <!-- Page-specific styling -->
+  <style>
+
+    body {
+      margin: 0;
+    }
+
+    .patients-page {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 35px 24px 80px;
+    }
+
+    .patient-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 55px;
+    }
+
+    .patient-nav a {
+      text-decoration: none;
+    }
+
+    .patient-nav-name {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .patient-hero {
+      max-width: 850px;
+      margin: 0 auto 65px;
+      text-align: center;
+    }
+
+    .patient-headshot {
+      width: 125px;
+      height: 125px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .patient-hero h1 {
+      margin: 0 0 15px;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+    }
+
+    .patient-hero .lead {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      line-height: 1.75;
+    }
+
+    .content-author {
+      margin: 18px auto 0;
+      font-size: 0.95rem;
+    }
+
+    .jump-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .jump-links a {
+      display: inline-block;
+      padding: 9px 15px;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      background: white;
+      text-decoration: none;
+    }
+
+    .procedure-section {
+      margin: 75px 0;
+      scroll-margin-top: 30px;
+    }
+
+    .procedure-section h2 {
+      margin-bottom: 12px;
+      font-size: 2rem;
+    }
+
+    .procedure-intro {
+      max-width: 900px;
+      margin-bottom: 28px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .faq-group {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      background: white;
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 18px 20px;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .faq-item p {
+      margin: 0;
+      padding: 0 20px 20px;
+      line-height: 1.7;
+    }
+
+    .procedure-link {
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .video-section {
+      margin: 85px 0;
+      scroll-margin-top: 30px;
+    }
+
+    .video-section h2 {
+      margin-bottom: 10px;
+    }
+
+    .video-intro {
+      max-width: 800px;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+
+    .video-card {
+      display: block;
+      overflow: hidden;
+      border-radius: 14px;
+      background: white;
+      text-decoration: none;
+      box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.10);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 9px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-thumb {
+      position: relative;
+      background: #000;
+    }
+
+    .video-thumb img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: flex;
+      width: 62px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      transform: translate(-50%, -50%);
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      color: white;
+      font-size: 21px;
+    }
+
+    .video-caption {
+      display: block;
+      padding: 14px 16px;
+      font-weight: 600;
+    }
+
+    .schedule-section {
+      margin-top: 90px;
+      padding: 45px 30px;
+      border-radius: 18px;
+      background: #f7f7f7;
+      text-align: center;
+      scroll-margin-top: 30px;
+    }
+
+    .schedule-section h2 {
+      margin-top: 0;
+    }
+
+    .schedule-intro {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .schedule-card {
+      display: block;
+      padding: 24px 18px;
+      border-radius: 12px;
+      background: white;
+      text-decoration: none;
+      box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .schedule-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.15rem;
+    }
+
+    .medical-disclaimer {
+      max-width: 820px;
+      margin: 55px auto 0;
+      text-align: center;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      opacity: 0.75;
+    }
+
+    @media (max-width: 600px) {
+
+      .patients-page {
+        padding: 25px 18px 60px;
+      }
+
+      .patient-nav {
+        margin-bottom: 40px;
+      }
+
+      .patient-hero {
+        margin-bottom: 50px;
+      }
+
+      .procedure-section {
+        margin: 55px 0;
+      }
+
+      .schedule-section {
+        padding: 35px 20px;
+      }
+
+    }
+
+  </style>
+
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.matthira.com/for-patients/#faq",
+    "url": "https://www.matthira.com/for-patients/",
+    "name": "Vision Correction and Cataract Surgery FAQs",
+    "description": "Patient education about EVO ICL, LASIK, PRK, SMILE, refractive lens exchange, and cataract surgery.",
+    "author": {
+      "@type": "Person",
+      "@id": "https://www.matthira.com/#person",
+      "name": "Matthew Hirabayashi, MD",
+      "url": "https://www.matthira.com/"
+    },
+    "about": [
+      {
+        "@type": "MedicalProcedure",
+        "name": "EVO ICL"
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "LASIK"
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "PRK"
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "SMILE"
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Refractive Lens Exchange"
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Cataract Surgery"
+      }
+    ],
+    "mainEntity": [
+
+      {
+        "@type": "Question",
+        "name": "What is EVO ICL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EVO ICL is a vision-correction lens placed under the surface of the eye. Unlike LASIK, SMILE, or PRK, EVO ICL corrects vision without permanently reshaping the cornea or changing the anatomy of the eye. The lens can also be upgraded, exchanged, or removed later if needed."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "Who is a good candidate for EVO ICL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EVO ICL is generally considered for adults with nearsightedness, with or without astigmatism, who have stable vision and suitable eye anatomy. It can be particularly useful for people with high prescriptions, thin corneas, dry-eye concerns, or those who are not ideal candidates for LASIK. A detailed eye examination is required to determine candidacy."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What is the difference between EVO ICL and LASIK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The main difference is that EVO ICL adds a corrective lens to the eye without changing the eye's anatomy, while LASIK permanently reshapes the cornea with a laser. EVO ICL preserves the corneal structure and can be upgraded, removed, or exchanged."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "Can EVO ICL be removed or replaced later?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. EVO ICL can be removed or exchanged later if needed. This differs from corneal laser procedures, which permanently change the shape of the cornea."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What is LASIK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LASIK is a laser vision-correction procedure that reshapes the cornea so light focuses more accurately on the retina. A window is created before the underlying cornea is reshaped with a laser."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What is the difference between LASIK and PRK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LASIK and PRK both reshape the cornea with a laser, but they differ in how the corneal surface is treated. LASIK uses a window and usually provides faster initial recovery. PRK does not create a window; instead, the surface epithelium regenerates over several days."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "Who is a good candidate for LASIK or PRK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Good candidates generally have a stable prescription, healthy eyes, and corneal measurements appropriate for laser vision correction. Corneal imaging and a complete eye examination help determine whether LASIK, PRK, or another procedure is the best option."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "Can LASIK and PRK correct astigmatism?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Both LASIK and PRK can correct astigmatism by reshaping the cornea to improve how light focuses on the retina."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What is SMILE eye surgery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SMILE, or Small Incision Lenticule Extraction, is a laser vision-correction procedure used to treat nearsightedness and astigmatism. A laser creates a thin lens-shaped piece of corneal tissue called a lenticule, which is removed through a small opening to reshape the cornea."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What is the difference between SMILE and LASIK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both SMILE and LASIK reshape the cornea, but SMILE does not create a LASIK-style corneal window. Instead, corrective corneal tissue is removed through a small opening."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "Who is a good candidate for SMILE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SMILE is generally considered for adults with stable nearsightedness, with or without astigmatism, and healthy corneas. Prescription, corneal anatomy, eye health, and lifestyle help determine whether SMILE is the best option."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What is refractive lens exchange?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Refractive lens exchange, or RLE, is a vision-correction procedure that removes the eye's natural crystalline lens and replaces it with an artificial intraocular lens. It is performed before a visually significant cataract develops."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "Who is a good candidate for refractive lens exchange?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RLE is most commonly considered for adults who are developing presbyopia and want to reduce dependence on reading glasses, bifocals, or contact lenses. It may also be considered when prescription or eye anatomy makes other vision-correction procedures less suitable."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What is the difference between refractive lens exchange and cataract surgery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RLE and cataract surgery use a similar lens-replacement technique. Cataract surgery removes a natural lens after it has become cloudy, while RLE replaces a still-clear natural lens primarily to improve vision and reduce dependence on glasses."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What lens options are available for lens replacement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lens options can include monofocal, multifocal or trifocal, extended depth-of-focus, toric, and Light Adjustable Lens technologies. Lens selection is individualized based on eye health, anatomy, lifestyle, and visual goals."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What is cataract surgery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cataract surgery removes the eye's cloudy natural lens and replaces it with a clear artificial intraocular lens. The replacement lens can also be selected to address aspects of the eye's prescription."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "When should I have cataract surgery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cataract surgery is generally considered when cataracts begin to interfere with daily activities or quality of life, such as reading, driving, recognizing faces, or seeing clearly in dim conditions."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "What lens implants are available for cataract surgery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cataract surgery can use several types of intraocular lenses, including monofocal, toric, multifocal or trifocal, extended depth-of-focus, and Light Adjustable Lens technologies."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "Can cataracts come back after cataract surgery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Once the cloudy natural lens is removed, that cataract cannot return. A membrane behind the new lens can become cloudy later, called posterior capsule opacification, which can be treated with a YAG laser procedure. This membrane does not return once treated."
+        }
+      },
+
+      {
+        "@type": "Question",
+        "name": "Can I have cataract surgery after LASIK, PRK, or EVO ICL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Previous LASIK, PRK, or EVO ICL does not prevent cataract surgery. Prior vision-correction procedures do affect surgical planning, so specialized measurements and lens-power calculations may be used."
+        }
+      }
+
+    ]
+  }
+  </script>
+
+</head>
+
+
+<body>
+
+  <main class="patients-page">
+
+
+    <!-- Navigation -->
+    <nav
+      class="patient-nav"
+      aria-label="Patient page navigation"
+    >
+
+      <a
+        class="patient-nav-name"
+        href="/"
+      >
+        Matthew Hirabayashi, MD
+      </a>
+
+      <a href="/">
+        ← Main Site
+      </a>
+
+    </nav>
+
+
+    <!-- Hero -->
+    <header class="patient-hero">
+
+      <img
+        src="/assets/Matt Hirabayashi Headshot Circle Small.png"
+        alt="Matthew Hirabayashi, MD, ophthalmologist and vision correction surgeon"
+        class="patient-headshot"
+      >
+
+      <h1>For Patients</h1>
+
+      <p class="lead">
+        Learn about modern vision correction and cataract surgery,
+        including EVO ICL, LASIK, PRK, SMILE, refractive lens exchange,
+        and cataract surgery. These answers explain what each procedure
+        does, who may be a candidate, and how the options differ.
+      </p>
+
+      <p class="content-author">
+        Patient education by
+        <a href="/">
+          <strong>Matthew Hirabayashi, MD</strong>
+        </a>,
+        board-certified ophthalmologist and fellowship-trained
+        vision correction and cataract surgeon.
+      </p>
+
+      <nav
+        class="jump-links"
+        aria-label="Procedure topics"
+      >
+        <a href="#icl">EVO ICL</a>
+        <a href="#lasik">LASIK &amp; PRK</a>
+        <a href="#smile">SMILE</a>
+        <a href="#rle">Lens Replacement</a>
+        <a href="#cataract">Cataract Surgery</a>
+        <a href="#videos">Videos</a>
+        <a href="#schedule">Schedule</a>
+      </nav>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         EVO ICL
+         ========================================================= -->
+
+    <section
+      class="procedure-section"
+      id="icl"
+    >
+
+      <h2>EVO ICL</h2>
+
+      <p class="procedure-intro">
+        EVO ICL is a vision-correction lens under the surface of the eye. It corrects
+        nearsightedness and astigmatism without permanently reshaping
+        the cornea or changing the eye's anatomy and can be removed or exchanged later if needed.
+      </p>
+
+
+      <div class="faq-group">
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is EVO ICL?
+          </summary>
+
+          <p>
+            EVO ICL is a vision-correction lens placed
+            under the surface of the eye.
+            Unlike LASIK, SMILE, or PRK, EVO ICL corrects vision
+            without permanently reshaping the cornea or changing the eye's anatomy. The lens can
+            also be removed or exchanged later if needed.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Who is a good candidate for EVO ICL?
+          </summary>
+
+          <p>
+            EVO ICL is generally considered for adults with
+            nearsightedness, with or without astigmatism, who have
+            stable vision and suitable eye anatomy. It can be
+            particularly useful for people with high prescriptions,
+            thin corneas, dry-eye concerns, or those who are not ideal
+            candidates for LASIK. A detailed eye examination is
+            required to determine candidacy.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is the difference between EVO ICL and LASIK?
+          </summary>
+
+          <p>
+            The main difference is that EVO ICL adds a corrective lens
+            inside the eye, while LASIK permanently reshapes the cornea
+            with a laser. EVO ICL preserves the corneal structure and
+            can be removed or exchanged. Which procedure is better depends on
+            prescription, eye anatomy, age, eye health, and visual goals.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            How long does EVO ICL surgery take and what is recovery like?
+          </summary>
+
+          <p>
+            EVO ICL surgery is completed in only a few minutes per eye,
+            and visual improvement is often noticed very quickly.
+            Many patients return to normal daily activities the
+            following day, although prescription drops and temporary
+            activity restrictions are used during early healing.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can EVO ICL be removed or replaced later?
+          </summary>
+
+          <p>
+            Yes. EVO ICL can be removed or exchanged later if needed.
+            This differs from corneal laser procedures, which
+            permanently change the shape of the cornea.
+          </p>
+
+        </details>
+
+
+      </div>
+
+
+      <a
+        class="procedure-link"
+        href="https://amarillonuvision.com/icls/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read more about EVO ICL →
+      </a>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         LASIK AND PRK
+         ========================================================= -->
+
+    <section
+      class="procedure-section"
+      id="lasik"
+    >
+
+      <h2>LASIK &amp; PRK</h2>
+
+      <p class="procedure-intro">
+        LASIK and PRK are laser vision-correction procedures that
+        reshape the cornea so light focuses more accurately on the
+        retina. Both can treat nearsightedness, farsightedness, and
+        astigmatism in appropriately selected patients.
+      </p>
+
+
+      <div class="faq-group">
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is LASIK?
+          </summary>
+
+          <p>
+            LASIK is a laser vision-correction procedure that reshapes
+            the cornea so light focuses more accurately on the retina.
+            A thin corneal window is created, the underlying cornea is
+            reshaped with a laser, and the window is repositioned.
+            LASIK can correct nearsightedness, farsightedness, and
+            astigmatism in appropriate candidates.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is the difference between LASIK and PRK?
+          </summary>
+
+          <p>
+            LASIK and PRK both reshape the cornea with a laser, but
+            they differ in how the corneal surface is treated. LASIK
+            creates a window, which usually allows faster
+            initial recovery. PRK does not create a window; instead, the
+            surface epithelium regenerates over several days.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Who is a good candidate for LASIK or PRK?
+          </summary>
+
+          <p>
+            Good candidates generally have a stable prescription,
+            healthy eyes, and corneal measurements appropriate for
+            laser vision correction. LASIK requires adequate healthy
+            corneal tissue, while PRK may be preferable for some
+            patients because it does not create a window first.
+            Corneal imaging and a complete eye examination help
+            determine the best option.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            How quickly does vision recover after LASIK or PRK?
+          </summary>
+
+          <p>
+            LASIK usually provides very rapid visual recovery, often
+            beginning within hours or by the following day. PRK has a
+            slower initial recovery because the corneal surface must
+            regenerate over several days. Final visual quality can be
+            excellent with either procedure when appropriately selected.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can LASIK and PRK correct astigmatism?
+          </summary>
+
+          <p>
+            Yes. Both LASIK and PRK can correct astigmatism by
+            reshaping the cornea to improve how light focuses on the
+            retina. The appropriate treatment depends on the amount
+            and type of astigmatism as well as the patient's corneal
+            measurements.
+          </p>
+
+        </details>
+
+
+      </div>
+
+
+      <a
+        class="procedure-link"
+        href="https://amarillonuvision.com/lasik/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read more about LASIK and PRK →
+      </a>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         SMILE
+         ========================================================= -->
+
+    <section
+      class="procedure-section"
+      id="smile"
+    >
+
+      <h2>SMILE</h2>
+
+      <p class="procedure-intro">
+        SMILE, or Small Incision Lenticule Extraction, is a laser
+        vision-correction procedure that reshapes the cornea through
+        a small opening without creating a LASIK-style window.
+      </p>
+
+
+      <div class="faq-group">
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is SMILE eye surgery?
+          </summary>
+
+          <p>
+            SMILE, or Small Incision Lenticule Extraction, is a laser
+            vision-correction procedure used to treat nearsightedness
+            and astigmatism. A laser creates a thin lens-shaped piece
+            of corneal tissue called a lenticule, which is removed
+            through a small opening to reshape the cornea and improve
+            focus.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Who is a good candidate for SMILE?
+          </summary>
+
+          <p>
+            SMILE is generally considered for adults with stable
+            nearsightedness, with or without astigmatism, and healthy
+            corneas. Prescription, corneal anatomy, eye health, and
+            lifestyle all help determine whether SMILE is the best
+            vision-correction procedure.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is the difference between SMILE and LASIK?
+          </summary>
+
+          <p>
+            Both SMILE and LASIK reshape the cornea, but SMILE treats a different layer of the cornea and
+            not create a LASIK-style corneal window. Instead, the
+            corrective corneal tissue is removed through a small
+            opening. The best procedure depends on prescription,
+            corneal anatomy, eye health, and lifestyle.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            How long does SMILE take and what is recovery like?
+          </summary>
+
+          <p>
+            SMILE is a short procedure, with the laser portion lasting
+            only seconds. Many patients notice clearer vision within
+            hours or by the following morning and can return to many
+            normal daily activities quickly.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can SMILE correct astigmatism?
+          </summary>
+
+          <p>
+            Yes. SMILE can correct nearsightedness with or without
+            astigmatism in appropriate candidates. Your prescription
+            and corneal measurements determine whether SMILE is
+            suitable for your eyes.
+          </p>
+
+        </details>
+
+
+      </div>
+
+
+      <a
+        class="procedure-link"
+        href="https://amarillonuvision.com/smile/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read more about SMILE →
+      </a>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         LENS REPLACEMENT / RLE
+         ========================================================= -->
+
+    <section
+      class="procedure-section"
+      id="rle"
+    >
+
+      <h2>Lens Replacement / RLE</h2>
+
+      <p class="procedure-intro">
+        Refractive Lens Exchange, also called RLE or lens replacement,
+        replaces the natural crystalline lens with an artificial
+        intraocular lens before a visually significant cataract
+        develops. It is often considered when age-related changes in
+        near focus become important.
+      </p>
+
+
+      <div class="faq-group">
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is refractive lens exchange (RLE)?
+          </summary>
+
+          <p>
+            Refractive lens exchange, or RLE, is a vision-correction
+            procedure that removes the eye's natural crystalline lens
+            and replaces it with an artificial intraocular lens (IOL).
+            It is performed before a visually significant cataract
+            develops and can address several types of refractive error
+            depending on the lens selected.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Who is a good candidate for refractive lens exchange?
+          </summary>
+
+          <p>
+            RLE is most commonly considered for adults who are
+            developing presbyopia and want to reduce dependence on
+            reading glasses, bifocals, or contact lenses. It may also
+            be considered when prescription or eye anatomy makes
+            LASIK, PRK, SMILE, or EVO ICL less suitable.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is the difference between RLE and cataract surgery?
+          </summary>
+
+          <p>
+            RLE and cataract surgery use a similar lens-replacement
+            technique. Cataract surgery removes a natural lens after
+            it has become cloudy, while RLE replaces a still-clear
+            natural lens primarily to improve vision and reduce
+            dependence on glasses. Because the natural lens is
+            removed during RLE, that eye cannot later develop a
+            cataract.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What lens options are available for lens replacement?
+          </summary>
+
+          <p>
+            Lens options can include monofocal, toric, multifocal or
+            trifocal, extended depth-of-focus (EDOF), and Light
+            Adjustable Lens technologies. Different lenses provide
+            different balances of distance, intermediate, and near
+            vision, so lens selection is individualized to eye health
+            and visual priorities.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            How quickly does vision recover after RLE?
+          </summary>
+
+          <p>
+            Visual improvement often begins within the first day after
+            lens replacement, although vision can continue to sharpen
+            and stabilize over the following days or weeks. Eye drops
+            and temporary activity restrictions are used during healing.
+          </p>
+
+        </details>
+
+
+      </div>
+
+
+      <a
+        class="procedure-link"
+        href="https://amarillonuvision.com/lens-replacement/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read more about lens replacement →
+      </a>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CATARACT SURGERY
+         ========================================================= -->
+
+    <section
+      class="procedure-section"
+      id="cataract"
+    >
+
+      <h2>Cataract Surgery</h2>
+
+      <p class="procedure-intro">
+        A cataract occurs when the eye's natural lens becomes cloudy.
+        Cataract surgery removes that cloudy natural lens and replaces
+        it with a clear artificial intraocular lens, or IOL.
+      </p>
+
+
+      <div class="faq-group">
+
+
+        <details class="faq-item">
+
+          <summary>
+            What is cataract surgery?
+          </summary>
+
+          <p>
+            Cataract surgery removes the eye's cloudy natural lens and
+            replaces it with a clear artificial intraocular lens (IOL).
+            The new lens restores clarity and can also be selected to
+            address aspects of the eye's prescription.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            When should I have cataract surgery?
+          </summary>
+
+          <p>
+            Cataract surgery is generally considered when cataracts
+            begin to interfere with daily activities or quality of
+            life. Common examples include difficulty reading, driving,
+            recognizing faces, seeing in dim conditions, or doing
+            activities you enjoy.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What lens implants are available for cataract surgery?
+          </summary>
+
+          <p>
+            Cataract surgery can use several types of intraocular
+            lenses, including monofocal, toric, multifocal or trifocal,
+            extended depth-of-focus (EDOF), and Light Adjustable Lens
+            technologies. The best IOL depends on eye health,
+            astigmatism, previous eye surgery, and the range of vision
+            a patient wants after surgery.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            How quickly does vision recover after cataract surgery?
+          </summary>
+
+          <p>
+            Many patients notice clearer or brighter vision within the
+            first day after cataract surgery. Vision can fluctuate
+            during early healing and may continue to stabilize over
+            the following several weeks.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can cataracts come back after cataract surgery?
+          </summary>
+
+          <p>
+            No! Once the cloudy lens is removed, that cataract
+            cannot return. A thin membrane of scar tissue behind the new lens can
+            become cloudy later (over 50% of the time), a condition called posterior capsule
+            opacification (PCO). PCO can be treated with a
+            brief laser procedure called a YAG and this membrane never returns.
+          </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can I have cataract surgery after LASIK, PRK, or EVO ICL?
+          </summary>
+
+          <p>
+            Yes. Previous LASIK, PRK, or EVO ICL does not prevent
+            someone from having cataract surgery. Prior
+            vision-correction procedures do affect surgical planning,
+            so specialized measurements and lens-power calculations
+            may be used when selecting the cataract lens. This is one major benefit of EVO ICL.
+          </p>
+
+        </details>
+
+
+      </div>
+
+
+      <a
+        class="procedure-link"
+        href="https://amarillonuvision.com/cataract-surgery/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read more about cataract surgery →
+      </a>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         PATIENT EDUCATION VIDEOS
+         ========================================================= -->
+
+    <section
+      class="video-section"
+      id="videos"
+    >
+
+      <h2>Patient Education Videos</h2>
+
+      <p class="video-intro">
+        Watch educational videos about vision, refractive surgery,
+        cataracts, and modern eye surgery. Select a thumbnail to open
+        the video on YouTube.
+      </p>
+
+
+      <div class="video-grid">
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/49PXOgKN0bI?si=vz8UtFTWYFPQRuZS"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch patient education video on YouTube"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/49PXOgKN0bI/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/df4LIkhEed4?si=MMunltwi0WYPaUO0"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch patient education video on YouTube"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/df4LIkhEed4/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/lL49cK9nins?si=R4qvRXAyy4EHpCKf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/lL49cK9nins/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/8HrP4hDSeuM?si=jCxkDBPeyn7CR3gW"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/8HrP4hDSeuM/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/NNWMJwXZzss?si=q03phTloK32XAac5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/NNWMJwXZzss/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/th0s-Py-ggI?si=wyXaP0sDU_XqnNCw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/th0s-Py-ggI/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/g7mmaqYXZAA?si=R-80Ni2X-7y5pBi-"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/g7mmaqYXZAA/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/doFLUksgClI?si=V71K80lHFHeKZ2v6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/doFLUksgClI/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/atfzaC3QNMs?si=jf2UKjura2kL1S45"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/atfzaC3QNMs/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/UHcFdd12zSk?si=oeKMe5Yah2Hehdaj"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/UHcFdd12zSk/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/Qn8oye7OTlo?si=_TucIUqc9F4_1rBm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/Qn8oye7OTlo/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/tDuxHwjAm3I?si=2tHo9Wuw14c5dtXA"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/tDuxHwjAm3I/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/9sXv39GDSTE?si=jQiyHJXRk7XqRaSH"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/9sXv39GDSTE/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/G1Cqv-LkA0w?si=jJxzsospARZotS95"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/G1Cqv-LkA0w/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/EAELGYNakaE?si=hfgeBZUQiTfEr9bM"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/EAELGYNakaE/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+        <a
+          class="video-card"
+          href="https://youtu.be/xR8_p0_XLPs?si=LHTSAkJ8c6x1Srit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="video-thumb">
+            <img
+              src="https://i.ytimg.com/vi/xR8_p0_XLPs/hqdefault.jpg"
+              alt="Patient education video by Matthew Hirabayashi, MD"
+              loading="lazy"
+            >
+            <span class="play-button">▶</span>
+          </div>
+          <span class="video-caption">Watch Video</span>
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         SCHEDULING
+         ========================================================= -->
+
+    <section
+      class="schedule-section"
+      id="schedule"
+    >
+
+      <h2>Schedule a Consultation</h2>
+
+      <p class="schedule-intro">
+        To schedule an evaluation with Matthew Hirabayashi, MD,
+        select the location that is most convenient for you.
+      </p>
+
+
+      <div class="schedule-grid">
+
+
+        <a
+          class="schedule-card"
+          href="https://lakeaustineye.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>Austin</strong>
+          Lake Austin Eye
+        </a>
+
+
+        <a
+          class="schedule-card"
+          href="https://amarillonuvision.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>Amarillo</strong>
+          Amarillo NuVision
+        </a>
+
+
+        <a
+          class="schedule-card"
+          href="https://sanantonio-lasik.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>San Antonio</strong>
+          Parkhurst NuVision
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Disclaimer -->
+    <p class="medical-disclaimer">
+      This page is provided for general educational purposes and is
+      not a substitute for an individualized medical examination,
+      diagnosis, or treatment recommendation. Procedure candidacy,
+      available technology, recovery instructions, risks, benefits,
+      and surgical plans vary by patient and location.
+    </p>
+
+
+  </main>
+
+</body>
+
+</html>
