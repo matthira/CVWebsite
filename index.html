@@ -409,6 +409,7 @@
 
     .review-carousel {
       display: flex;
+      align-items: flex-start;
       gap: 1rem;
       width: 100%;
       overflow-x: auto;
@@ -443,6 +444,30 @@
       margin: 0;
       line-height: 1.6;
       font-style: italic;
+    }
+
+    .review-text.collapsed {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .review-expand {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: #007BFF;
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .review-expand:hover {
+      text-decoration: underline;
     }
 
     .review-name {
@@ -1061,7 +1086,15 @@
     const carousel = document.getElementById("review-carousel");
     if (!carousel) return;
 
-    patientReviews.forEach(review => {
+    const randomizedReviews = [...patientReviews];
+
+    for (let i = randomizedReviews.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [randomizedReviews[i], randomizedReviews[j]] =
+        [randomizedReviews[j], randomizedReviews[i]];
+    }
+
+    randomizedReviews.forEach(review => {
       const card = document.createElement("article");
       card.className = "review-card";
 
@@ -1071,17 +1104,41 @@
 
       const text = document.createElement("p");
       text.className = "review-text";
-      text.textContent =
+
+      const reviewText =
         review.text.trim().toLowerCase() === "rating only"
-          ? "“Five-star rating”"
-          : `“${review.text}”`;
+          ? "Five-star rating"
+          : review.text;
+
+      text.textContent = `“${reviewText}”`;
+
+      if (reviewText.length > 300) {
+        text.classList.add("collapsed");
+
+        const expandButton = document.createElement("button");
+        expandButton.className = "review-expand";
+        expandButton.type = "button";
+        expandButton.textContent = "Read more";
+
+        expandButton.addEventListener("click", () => {
+          const isCollapsed = text.classList.contains("collapsed");
+          text.classList.toggle("collapsed");
+          expandButton.textContent =
+            isCollapsed ? "Show less" : "Read more";
+        });
+
+        card.appendChild(stars);
+        card.appendChild(text);
+        card.appendChild(expandButton);
+      } else {
+        card.appendChild(stars);
+        card.appendChild(text);
+      }
 
       const name = document.createElement("span");
       name.className = "review-name";
       name.textContent = `— ${review.name}`;
 
-      card.appendChild(stars);
-      card.appendChild(text);
       card.appendChild(name);
       carousel.appendChild(card);
     });
